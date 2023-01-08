@@ -1,3 +1,4 @@
+/*Tema escuro*/
 body {
     background-color: #333;
     color: #fff;
@@ -67,3 +68,13 @@ body {
     border-color: #003366;
   }
   
+  /**/
+  .painel {
+    width: 50%;
+    float: left;
+  }
+
+  div {
+    padding-bottom: 0%;
+    
+  }

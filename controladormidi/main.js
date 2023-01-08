@@ -6,6 +6,9 @@
     .then(onEnabled)
     .catch(err => alert(err));
 
+    const listaInputs   = [];
+    const listaOutputs   = [];
+
   // Function triggered when WEBMIDI.js is ready
    function  onEnabled() {
 
@@ -18,14 +21,28 @@
     } else {
       WebMidi.inputs.forEach((device, index) => {
         //document.body.innerHTML+= `${index}: ${device.name} <br>`;
-        document.getElementById('nomeDispositivos').innerHTML += `${index}: ${device.name} <br>`;
+        document.getElementById('inputs').innerHTML += `${index}: ${device.name} <br>`;
+        listaInputs.push( {idpc: index, name: device.name} );
       });
 
+      WebMidi.outputs.forEach((device, index) => {
+        //document.body.innerHTML+= `${index}: ${device.name} <br>`;
+        document.getElementById('outputs').innerHTML += `${index}: ${device.name} <br>`;
+        listaOutputs.push( {idpc: index, name: device.name} );
+      });
       // WebMidi.inputs[0].addForwarder(WebMidi.outputs[1]); 
 
-      WebMidi.outputs[0].sendControlChange(0,87,1);
-      WebMidi.outputs[0].sendControlChange(32, 64,1);
-      WebMidi.outputs[0].sendProgramChange(118,1);
+      // WebMidi.outputs[0].sendControlChange(0,87,1);
+      // WebMidi.outputs[0].sendControlChange(32, 64,1);
+      // WebMidi.outputs[0].sendProgramChange(118,1);
+
+
+      
+
+
+      //console.log('listaOutputs',listaOutputs);
+      carregaLista('listaInstrumentosInput', listaInputs);
+      carregaLista('listaInstrumentosOutput', listaOutputs);
       
     }
 
@@ -33,7 +50,8 @@
   
 
   function PlayNota(){
-    let output = WebMidi.outputs[0];
+    let dispositivoSelecionado = parseInt( getSelectedValue('listaInstrumentosOutput') );
+    let output = WebMidi.outputs[dispositivoSelecionado];
     let channel = output.channels[1];
     channel.playNote("C3", {duration: 1000});
       
@@ -41,10 +59,10 @@
 
 function setInstrumento(){
   let idInstrumento = getSelectedValue('listaInstrumentos');
-  console.log(idInstrumento);
-  WebMidi.outputs[0].sendControlChange(0,87,1);
-  WebMidi.outputs[0].sendControlChange(32, 64,1);
-  WebMidi.outputs[0].sendProgramChange(parseInt(idInstrumento)-1,1);
+  let dispositivoSelecionado = parseInt( getSelectedValue('listaInstrumentosOutput') );
+  WebMidi.outputs[dispositivoSelecionado].sendControlChange(0,87,1);
+  WebMidi.outputs[dispositivoSelecionado].sendControlChange(32, 64,1);
+  WebMidi.outputs[dispositivoSelecionado].sendProgramChange(parseInt(idInstrumento)-1,1);
 }
 
 function carregaLista(listaId, itens){

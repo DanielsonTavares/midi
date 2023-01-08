@@ -14,16 +14,41 @@
 <body>
     <h1>Controlador Midi</h1>
     
-    <div id="nomeDispositivos"></div>
-
+    <div id="inputs" class="painel">
+        <h3>Inputs</h3>
+        
+    </div>
+    <div id="outputs" class="painel">
+        <h3>Outputs</h3>
+        
+    </div>
+    <br>
     <div id="painelInstrumentos">
+        <h3>Selecionar instrumento GM</h3>
         <select id="listaInstrumentos"></select>
+        <button id="btSetInstrumento" onClick="setInstrumento()">Trocar Instrumento</button>
     </div>
     
-    
-    <button id="btSetInstrumento" onClick="setInstrumento()">Trocar Instrumento</button>
-    <button id="btPlayNota" onClick="PlayNota()">Tocar</button>
-    
+    <div id="painelDispositivos">
+        
+        <div class="painel">
+            <p>inputs</p>
+            <select id="listaInstrumentosInput"></select>
+        </div>
+
+        <div class="painel">
+            <p>outputs</p>
+            <select id="listaInstrumentosOutput"></select>
+        </div>
+        <p>Selecione os dispositivos desejado.<br>*input não funciona ainda</p>
+    </div>
+
+    <div>
+        <br>
+        
+        <button id="btPlayNota" onClick="PlayNota()">Tocar</button>
+    </div>
+
     <script src="main.js"></script>  
 </body>
 </html>
