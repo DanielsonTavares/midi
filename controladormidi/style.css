@@ -1,0 +1,69 @@
+body {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  a {
+    color: #00ccff;
+  }
+  
+  a:hover {
+    color: #006699;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+  
+  p {
+    color: #ccc;
+  }
+  
+  blockquote {
+    background-color: #666;
+    border-color: #999;
+    color: #ccc;
+  }
+  
+  code {
+    background-color: #555;
+    color: #ccc;
+  }
+  
+  table {
+    background-color: #444;
+    border-color: #666;
+    color: #ccc;
+  }
+  
+  table th {
+    background-color: #222;
+    border-color: #666;
+    color: #fff;
+  }
+  
+  table tr {
+    border-color: #666;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #333;
+  }
+  
+  input[type="text"], input[type="email"], input[type="password"], textarea {
+    background-color: #333;
+    border-color: #444;
+    color: #ccc;
+  }
+  
+  input[type="submit"], input[type="button"], button {
+    background-color: #00ccff;
+    border-color: #006699;
+    color: #fff;
+  }
+  
+  input[type="submit"]:hover, input[type="button"]:hover, button:hover {
+    background-color: #006699;
+    border-color: #003366;
+  }
+  
