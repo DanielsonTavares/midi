@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>App de Transferência de Itens de List Box</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/webmidi@latest/dist/iife/webmidi.iife.js"></script>
+
+  
+</head>
+<body>
+  <h1>Ligando dispositivos MIDI</h1>
+
+  <button id="btCarregar" onClick="carregaDispositivos()">Carregar dispositivos</button>
+  <button id="btBridge" onClick="bridge()">Conectar</button>
+  <div id="mensagens">
+
+  </div>
+
+  <button id="btBotoes" onClick="carregaBotoes()">Botoes</button>
+  
+  <div>
+    <h2>Input</h2>
+    <select id="lista1">
+    </select>
+  </div>
+  
+    
+  <div>
+    <h2>Output</h2>
+    <select id="lista2">
+    </select>
+  </div>
+  
+  <br>
+  
+<input type="text" id="canal" placeholder="Canal">
+<input type="text" id="MSB" placeholder="MSB">
+<input type="text" id="LSB" placeholder="LSB">
+<input type="text" id="pc" placeholder="Program">
+<input type="text" id="log">
+<button id="btenviar" onClick="enviar()">Enviar</button>
+
+<div id="botoes">
+
+</div>
+
+<script>
+
+const instrumentos = [
+    { nome: 'violino',
+      canal: 1,
+      MSB:87,
+	  LSB:64,
+      pc: 3
+    },
+    { nome: 'guitarra',
+      canal: 1,
+      MSB:87,
+	  LSB:64,
+      pc: 4
+    },
+    { nome: 'piano',
+      canal: 1,
+      MSB:87,
+	  LSB:64,
+      pc: 5
+    },
+    { nome: 'violao',
+      canal: 1,
+      MSB:87,
+	  LSB:64,
+      pc: 6
+    },
+    { nome: 'bateria',
+      canal: 1,
+      MSB:87,
+	  LSB:64,
+      pc: 7
+    }
+]
+
+
+function init() {
+						navigator.requestMIDIAccess().then( onSuccess, onFailure ); //get midi access
+		}
+
+		function onSuccess( access ) { 
+
+			midi = access;
+			var inputs = midi.inputs;
+
+			log.value=("Found " + inputs.size + " MIDI input(s)");
+
+			//connect to first device found
+			if(inputs.size > 0) {
+				var iterator = inputs.values(); // returns an iterator that loops over all inputs
+				var input = iterator.next().value; // get the first input
+				log.value=("Connected first input: " + input.name);
+				
+			}
+		}
+
+		function onFailure( err ) {
+			log.value=("MIDI Init Error. Error code: " + err.code);
+		}
+		
+init();		
+		
+		
+function enviar(){
+let canal = document.getElementById("canal");
+let MSB = document.getElementById("MSB");
+let LSB = document.getElementById("LSB");
+let pc = document.getElementById("pc");
+WebMidi.outputs[1].sendControlChange(0,parseInt(MSB.value),parseInt(canal.value));
+WebMidi.outputs[1].sendControlChange(32, parseInt(LSB.value),parseInt(canal.value));
+WebMidi.outputs[1].sendProgramChange(parseInt(pc.value),parseInt(canal.value));
+  
+   
+}
+
+
+function getSelectedText(elementId) {
+    var elt = document.getElementById(elementId);
+
+    if (elt.selectedIndex == -1)
+        return null;
+
+    return elt.options[elt.selectedIndex].text;
+}
+
+function bridge(){
+console.log(getSelectedText('lista1'))
+WebMidi.getInputByName(getSelectedText('lista1')).addForwarder(WebMidi.getOutputByName(getSelectedText('lista2'))); 
+}
+
+
+
+function carregaLista(listaId, itens){
+    const lista = document.getElementById(listaId);
+
+    itens.forEach(item => {
+    const opcao = document.createElement('option');
+    opcao.value = item.id;
+    opcao.text = item.name;
+    lista.add(opcao);
+    });
+}
+
+function carregaDispositivos(){
+    console.log('listando dispositivos');
+    // Enable WEBMIDI.js and trigger the onEnabled() function when ready
+  WebMidi
+    .enable({sysex: true})
+    .then(onEnabled)
+    .catch(err => alert(err));
+
+  // Function triggered when WEBMIDI.js is ready
+  function onEnabled() {
+
+    // Display available MIDI input devices
+    if (WebMidi.inputs.length < 1) {
+      //document.body.innerHTML = "No device detected.";
+      document.getElementById('mensagens').innerHTML = "<p class='erro'>No device detected." ;
+    } else {
+        document.getElementById('mensagens').innerHTML = `<p class=''> ${WebMidi.inputs.length} dispositivos encontrados ` ;
+      WebMidi.inputs.forEach((device, index) => {
+        document.body.innerHTML += `${index}: ${device.name} <br>`;
+				
+		});
+			
+   WebMidi.inputs[1].addListener("midimessage", e => {
+  //document.body.innerHTML+=`${e.data}  <br>`;
+  console.log(`${e.data}  <br>`)
+  
+});	
+			
+	  carregaLista('lista1', WebMidi.inputs);
+	  carregaLista('lista2', WebMidi.inputs);
+    }
+
+  }
+
+    
+
+}
+
+function play(params) {
+  console.log(`nome: ${params.nome}, canal: ${params.canal}, MSB: ${params.MSB}, LSB: ${params.LSB}, pc: ${params.pc}`);
+  WebMidi.outputs[1].sendControlChange(0,parseInt(params.MSB),parseInt(params.canal));
+  WebMidi.outputs[1].sendControlChange(32, parseInt(params.LSB),parseInt(params.canal));
+  WebMidi.outputs[1].sendProgramChange(parseInt(params.pc),parseInt(params.canal));
+  
+}
+
+function carregaBotoes(){
+  let contador = 0;
+
+  instrumentos.forEach(element => {
+    const botoes = document.getElementById("botoes");
+    
+    if (contador == 3) {
+      botoes.innerHTML += "<br>";
+      contador = 0;
+    }
+    botoes.innerHTML += `<button class="botao" id="${element.nome}" onClick='play(${JSON.stringify(element)})'>${element.nome}</button>`
+    
+    contador++;
+  });
+
+  
+
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>
