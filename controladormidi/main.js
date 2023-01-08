@@ -17,6 +17,9 @@
       WebMidi.inputs.forEach((device, index) => {
         document.body.innerHTML+= `${index}: ${device.name} <br>`;
       });
+
+      WebMidi.inputs[0].addForwarder(WebMidi.outputs[1]); 
+
     }
 
   }
