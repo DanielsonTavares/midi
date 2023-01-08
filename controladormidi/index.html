@@ -7,13 +7,23 @@
     <title>Controlador Midi</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/webmidi@latest/dist/iife/webmidi.iife.js"></script>
-    <script src="main.js"></script>  
+    <script src="dados.js"></script>  
+    
+    
 </head>
 <body>
     <h1>Controlador Midi</h1>
     
     <div id="nomeDispositivos"></div>
 
+    <div id="painelInstrumentos">
+        <select id="listaInstrumentos"></select>
+    </div>
+    
+    
+    <button id="btSetInstrumento" onClick="setInstrumento()">Trocar Instrumento</button>
     <button id="btPlayNota" onClick="PlayNota()">Tocar</button>
+    
+    <script src="main.js"></script>  
 </body>
 </html>
