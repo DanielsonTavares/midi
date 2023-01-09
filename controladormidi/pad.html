@@ -12,18 +12,77 @@
         }
         .listbox {
           width: 50%;
+          height: 40px;
         }
         .label {
           width: 50%;
+          
         }
         .botao {
           display: inline-block;
           width: 33.33%;
           height: 100px;
         }
+
+        #modoEdicao{
+          width: 20px;
+          height: 20px;
+        }
+
+        .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+  .popup-conteudo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+  }
+  .popup-barra {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .popup-botao {
+    margin-left: 10px;
+  }
+
       </style>
       
-      
+      <script>
+        function btnClick(){
+          const modoEdicao = document.getElementById("modoEdicao");
+
+          if (modoEdicao.checked) {
+            console.log('abrir tela de edição');
+            mostrarPopUp();
+          } else {
+            console.log('clique normal');
+          }
+        }
+        
+        function mostrarPopUp(){
+          document.querySelector('.popup').style.display = 'block';
+        }
+
+        function fecharPopUp(){
+          document.querySelector('.popup').style.display = 'none';
+          console.log('sair sem salvar');
+        }
+
+        function confirmarPopUp(){
+          document.querySelector('.popup').style.display = 'none';
+          console.log('salvar e sair');
+        }
+
+      </script>
       
 </head>
 <body>
@@ -32,7 +91,7 @@
         <div class="label">Output</div>
     </div>
     <div class="container">
-        
+      
         <select class="listbox">
           <!-- Opções para o primeiro listbox -->
         </select>
@@ -40,21 +99,37 @@
         <select class="listbox">
           <!-- Opções para o segundo listbox -->
         </select>
-      </div>
+    </div>
+
+    <div class="container" id="pnlEdicao">
+      <input type="checkbox" id="modoEdicao"> 
+      <label>Modo edição</label>
+    </div>
 
       <div class="container">
-        <button class="botao">Botao 1</button>
-        <button class="botao">Botao 2</button>
-        <button class="botao">Botao 3</button>
-        <button class="botao">Botao 4</button>
-        <button class="botao">Botao 5</button>
-        <button class="botao">Botao 6</button>
-        <button class="botao">Botao 7</button>
-        <button class="botao">Botao 8</button>
-        <button class="botao">Botao 9</button>
-        <button class="botao">Botao 10</button>
-        <button class="botao">Botao 11</button>
-        <button class="botao">Botao 12</button>
+        <button class="botao" onClick="btnClick()">Botao 1</button>
+        <button class="botao" onClick="btnClick()">Botao 2</button>
+        <button class="botao" onClick="btnClick()">Botao 3</button>
+        <button class="botao" onClick="btnClick()">Botao 4</button>
+        <button class="botao" onClick="btnClick()">Botao 5</button>
+        <button class="botao" onClick="btnClick()">Botao 6</button>
+        <button class="botao" onClick="btnClick()">Botao 7</button>
+        <button class="botao" onClick="btnClick()">Botao 8</button>
+        <button class="botao" onClick="btnClick()">Botao 9</button>
+        <button class="botao" onClick="btnClick()">Botao 10</button>
+        <button class="botao" onClick="btnClick()">Botao 11</button>
+        <button class="botao" onClick="btnClick()">Botao 12</button>
+      </div>
+
+
+      <div class="popup">
+        <div class="popup-conteudo">
+          Conteúdo do popup
+          <div class="popup-barra">
+            <button id="confirmar-popup" class="popup-botao" onClick="confirmarPopUp()">Confirmar</button>
+            <button id="fechar-popup" class="popup-botao" onClick="fecharPopUp()">Fechar</button>
+          </div>
+        </div>
       </div>
 
 </body>
