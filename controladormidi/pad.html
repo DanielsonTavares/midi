@@ -29,6 +29,12 @@
           height: 20px;
         }
 
+        .bottom {
+                position:absolute;                 
+                bottom:0;                         
+                left:0;                         
+            }
+
         .popup {
     position: fixed;
     top: 0;
@@ -45,6 +51,8 @@
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
+    width: 50%;
+    height: 20%;
   }
   .popup-barra {
     display: flex;
@@ -57,19 +65,26 @@
       </style>
       
       <script>
-        function btnClick(){
+        function btnClick(nmBotao){
           const modoEdicao = document.getElementById("modoEdicao");
 
           if (modoEdicao.checked) {
             console.log('abrir tela de edição');
-            mostrarPopUp();
+            mostrarPopUp(nmBotao);
           } else {
             console.log('clique normal');
           }
         }
         
-        function mostrarPopUp(){
+        function mostrarPopUp(nmBotao){
           document.querySelector('.popup').style.display = 'block';
+          document.getElementById('txtIdPad').value = nmBotao;
+          
+          document.getElementById('txtNomePad').value = pads[nmBotao].nome;
+          
+
+
+          console.log('dentro do popup: ',pads[nmBotao]);
         }
 
         function fecharPopUp(){
@@ -79,7 +94,10 @@
 
         function confirmarPopUp(){
           document.querySelector('.popup').style.display = 'none';
-          console.log('salvar e sair');
+          const txtIdPad = parseInt(document.getElementById('txtIdPad').value);
+          pads[txtIdPad].nome = document.getElementById('txtNomePad').value;
+
+          carregaPads();
         }
 
       </script>
@@ -106,31 +124,76 @@
       <label>Modo edição</label>
     </div>
 
-      <div class="container">
-        <button class="botao" onClick="btnClick()">Botao 1</button>
-        <button class="botao" onClick="btnClick()">Botao 2</button>
-        <button class="botao" onClick="btnClick()">Botao 3</button>
-        <button class="botao" onClick="btnClick()">Botao 4</button>
-        <button class="botao" onClick="btnClick()">Botao 5</button>
-        <button class="botao" onClick="btnClick()">Botao 6</button>
-        <button class="botao" onClick="btnClick()">Botao 7</button>
-        <button class="botao" onClick="btnClick()">Botao 8</button>
-        <button class="botao" onClick="btnClick()">Botao 9</button>
-        <button class="botao" onClick="btnClick()">Botao 10</button>
-        <button class="botao" onClick="btnClick()">Botao 11</button>
-        <button class="botao" onClick="btnClick()">Botao 12</button>
+      <div class="container" id="painelPads">
+
       </div>
 
 
       <div class="popup">
         <div class="popup-conteudo">
-          Conteúdo do popup
+
           <div class="popup-barra">
             <button id="confirmar-popup" class="popup-botao" onClick="confirmarPopUp()">Confirmar</button>
             <button id="fechar-popup" class="popup-botao" onClick="fecharPopUp()">Fechar</button>
           </div>
+
+          <input type="hidden" id="txtIdPad">
+
+          <div class="container">
+            <div class="label">Nome:</div>
+              <input type="text" id="txtNomePad">
+          </div>
+
+          <div class="container">
+            <div class="label">Canal Midi:</div>
+            <select class=""></select>
+          </div>
+
+          <div class="container">
+            <div class="label">Categoria:</div>
+            <select class=""></select>
+          </div>
+
+          <div class="container">
+            <div class="label">Timbre:</div>
+            <select class=""></select>
+          </div>
+          
+
+
         </div>
       </div>
+
+  <script>
+    
+    const pads = [
+      {id:0, nome: "botao 1",   canalMidi: "aaaaa", categoria: "", timbre: ""},
+      {id:1, nome: "botao 2",   canalMidi: "bbbbb", categoria: "", timbre: ""},
+      {id:2, nome: "botao 3",   canalMidi: "bbbbb", categoria: "", timbre: ""},
+      {id:3, nome: "botao 4",   canalMidi: "bbbbb", categoria: "", timbre: ""},
+      {id:4, nome: "botao 5",   canalMidi: "bbbbb", categoria: "", timbre: ""},
+      {id:5, nome: "botao 6",   canalMidi: "bbbbb", categoria: "", timbre: ""},
+      {id:6, nome: "botao 7",   canalMidi: "bbbbb", categoria: "", timbre: ""},
+      {id:7, nome: "botao 8",   canalMidi: "bbbbb", categoria: "", timbre: ""},
+      {id:8, nome: "botao 9",   canalMidi: "bbbbb", categoria: "", timbre: ""},
+      {id:9, nome: "botao 10",  canalMidi: "bbbbb", categoria: "", timbre: ""},
+      {id:10, nome: "botao 11", canalMidi: "bbbbb", categoria: "", timbre: ""},
+      {id:11, nome: "botao 12", canalMidi: "bbbbb", categoria: "", timbre: ""}
+    ];
+
+    function carregaPads(){
+      
+      painelPads.innerHTML = "";
+
+      pads.forEach( (pad)=>{
+        const painelPads = document.getElementById('painelPads');
+        painelPads.innerHTML += `<button class='botao' onClick='btnClick(${pad.id})'>${pad.nome}</button>`;
+      } )
+    }
+
+    carregaPads();
+
+  </script>
 
 </body>
 </html>

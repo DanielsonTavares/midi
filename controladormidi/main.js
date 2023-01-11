@@ -53,8 +53,22 @@
     let dispositivoSelecionado = parseInt( getSelectedValue('listaInstrumentosOutput') );
     let output = WebMidi.outputs[dispositivoSelecionado];
     let channel = output.channels[1];
-    channel.playNote("C3", {duration: 1000});
-      
+
+    let time = 0;
+    time = WebMidi.time;
+
+    channel.playNote("C3", {duration: 500, time: time});
+    time+=500;
+    channel.playNote("D3", {duration: 500, time: time});
+    time+=500;
+    channel.playNote("E3", {duration: 500, time: time});
+    time+=500;
+    channel.playNote("F3", {duration: 500, time: time});
+    
+    time+=400;
+    channel.playNote("F3", {duration: 500, time: time});
+    time+=400;
+    channel.playNote("F3", {duration: 800, time: time});
 }
 
 function setInstrumento(){

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://cdn.jsdelivr.net/npm/webmidi@latest/dist/iife/webmidi.iife.js"></script>
+	<script>
+
+  // Enable WEBMIDI.js and trigger the onEnabled() function when ready
+  WebMidi
+    .enable({sysex: true})
+    .then(onEnabled)
+    .catch(err => alert(err));
+
+  // Function triggered when WEBMIDI.js is ready
+  function onEnabled() {
+
+    // Display available MIDI input devices
+   if (WebMidi.inputs.length < 1) {
+    document.body.innerHTML+= "No device detected.";
+  } else {
+    WebMidi.inputs.forEach((device, index) => {
+      document.body.innerHTML+= `${index}: ${device.name} <br>`;
+    });
+  }
+
+  const mySynth = WebMidi.inputs[0];
+   
+  WebMidi.inputs[0].addListener("noteon", e => {
+  document.body.innerHTML+= `${e.note.name + e.note.number} <br>`;}, {channels: [1, 10]});
+
+ };
+    
+	function pad() {
+	WebMidi.outputs[0].sendSysex (0x41, [0x10, 0x00, 0x00, 0x3A, 0x12, 0x01, 0x00, 0x00, 0x21, 0x00, 0x5D]);
+	console.log("Comando Enviado")
+  };
+  
+  function rtm() {
+	WebMidi.outputs[0].sendSysex (0x41, [0x10, 0x00, 0x00, 0x3A, 0x12, 0x01, 0x00, 0x00, 0x21, 0x01, 0x5]);
+	console.log("Comando Enviado")
+  };
+
+
+</script>
+
+
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  background-color: black;
+  padding: 5px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>Performance MIDI</h1>
+
+<p>Ative ou desative funções para performances</p>
+
+<div class="grid-container">
+
+  <div class="grid-item">Performance</div>
+  <div class="grid-item">Canal Midi</div>
+  <div class="grid-item">Ativo</div>
+  <div class="grid-item">PitchBend</div>
+  <div class="grid-item">Modulation</div>
+  <div class="grid-item">Sustain</div>
+  
+  <div class="grid-item">Parte 1</div>
+  <div class="grid-item"><select id="midi1"> 
+  <option value=1>Canal 1</option>
+  <option value=2>Canal 2</option>
+  <option value=3>Canal 3</option>
+  <option value=4>Canal 4</option>
+  <option value=5>Canal 5</option>
+  <option value=6>Canal 6</option>
+  <option value=7>Canal 7</option>
+  <option value=8>Canal 8</option>
+  <option value=9>Canal 9</option>
+  <option value=10>Canal 10</option>
+  <option value=11>Canal 11</option>
+  <option value=12>Canal 12</option>
+  <option value=13>Canal 13</option>
+  <option value=14>Canal 14</option>
+  <option value=15>Canal 15</option>
+  <option value=16>Canal 16</option>
+  </select></div>
+  <div class="grid-item"><input type="checkbox" id="sw1" checked=true onClick="fnClick('sw1')"></div>
+  <div class="grid-item"><input type="checkbox" id="pb1" checked=true onClick="fnClick('pb1')"></div>
+  <div class="grid-item"><input type="checkbox" id="md1" checked=true onClick="fnClick('md1')"></div>
+  <div class="grid-item"><input type="checkbox" id="hd1" checked=true onClick="fnClick('hd1')"></div>
+  
+  </div>
+
+
+  <script>
+    //fadsfasdfadsfa
+    function fnClick(id){
+      console.log('teste: ', id);
+      
+      const checkBox = document.getElementById(id);
+
+      if(id == 'sw1' ){
+
+        if (checkBox.checked) {
+          console.log('marcado');
+          WebMidi.outputs[0].sendSysex (0x41, [0x10, 0x00, 0x00, 0x3A, 0x12, 0x01, 0x00, 0x00, 0x21, 0x01, 0x5E]);
+        }else{
+          console.log('não marcado');
+          WebMidi.outputs[0].sendSysex (0x41, [0x10, 0x00, 0x00, 0x3A, 0x12, 0x01, 0x00, 0x00, 0x21, 0x00, 0x5D]);
+        }
+      }
+
+      if(id == 'pb1' ){
+
+        if (checkBox.checked) {
+          console.log('marcado');
+          WebMidi.outputs[0].sendSysex (0x41, [0x10, 0x00, 0x00, 0x3A, 0x12, 0x01, 0x00, 0x00, 0x21, 0x01, 0x5E]);
+        }else{
+          console.log('não marcado');
+          WebMidi.outputs[0].sendSysex (0x41, [0x10, 0x00, 0x00, 0x3A, 0x12, 0x01, 0x00, 0x00, 0x21, 0x00, 0x5D]);
+        }
+      }
+
+    }
+  </script>
+
+</body>
+</html>
+
+
