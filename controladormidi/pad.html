@@ -81,6 +81,9 @@
           document.getElementById('txtIdPad').value = nmBotao;
           
           document.getElementById('txtNomePad').value = pads[nmBotao].nome;
+          document.getElementById('selCanalMidi').value = pads[nmBotao].canalMidi;
+          document.getElementById('selCategoria').value = pads[nmBotao].categoria;
+          document.getElementById('selTimbre').value = pads[nmBotao].timbre;
           
 
 
@@ -96,8 +99,21 @@
           document.querySelector('.popup').style.display = 'none';
           const txtIdPad = parseInt(document.getElementById('txtIdPad').value);
           pads[txtIdPad].nome = document.getElementById('txtNomePad').value;
+          pads[txtIdPad].canalMidi = parseInt(getSelectedValue('selCanalMidi'));
+          pads[txtIdPad].categoria = parseInt(getSelectedValue('selCategoria'));
+          pads[txtIdPad].timbre = parseInt(getSelectedValue('selTimbre'));
 
           carregaPads();
+        }
+
+
+        function getSelectedValue(elementId) {
+          var elt = document.getElementById(elementId);
+
+          if (elt.selectedIndex == -1)
+              return null;
+
+          return elt.options[elt.selectedIndex].value;
         }
 
       </script>
@@ -146,17 +162,35 @@
 
           <div class="container">
             <div class="label">Canal Midi:</div>
-            <select class=""></select>
+            <select class="" id="selCanalMidi">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>    
+              
+            </select>
           </div>
 
           <div class="container">
             <div class="label">Categoria:</div>
-            <select class=""></select>
+            <select class="" id="selCategoria"></select>
           </div>
 
           <div class="container">
             <div class="label">Timbre:</div>
-            <select class=""></select>
+            <select class="" id="selTimbre"></select>
           </div>
           
 
@@ -167,31 +201,58 @@
   <script>
     
     const pads = [
-      {id:0, nome: "botao 1",   canalMidi: "aaaaa", categoria: "", timbre: ""},
-      {id:1, nome: "botao 2",   canalMidi: "bbbbb", categoria: "", timbre: ""},
-      {id:2, nome: "botao 3",   canalMidi: "bbbbb", categoria: "", timbre: ""},
-      {id:3, nome: "botao 4",   canalMidi: "bbbbb", categoria: "", timbre: ""},
-      {id:4, nome: "botao 5",   canalMidi: "bbbbb", categoria: "", timbre: ""},
-      {id:5, nome: "botao 6",   canalMidi: "bbbbb", categoria: "", timbre: ""},
-      {id:6, nome: "botao 7",   canalMidi: "bbbbb", categoria: "", timbre: ""},
-      {id:7, nome: "botao 8",   canalMidi: "bbbbb", categoria: "", timbre: ""},
-      {id:8, nome: "botao 9",   canalMidi: "bbbbb", categoria: "", timbre: ""},
-      {id:9, nome: "botao 10",  canalMidi: "bbbbb", categoria: "", timbre: ""},
-      {id:10, nome: "botao 11", canalMidi: "bbbbb", categoria: "", timbre: ""},
-      {id:11, nome: "botao 12", canalMidi: "bbbbb", categoria: "", timbre: ""}
+      {id:0, nome: "botao 1",   canalMidi: 2, categoria: 3, timbre: ""},
+      {id:1, nome: "botao 2",   canalMidi: 1, categoria: 0, timbre: ""},
+      {id:2, nome: "botao 3",   canalMidi: 1, categoria: 0, timbre: ""},
+      {id:3, nome: "botao 4",   canalMidi: 1, categoria: 0, timbre: ""},
+      {id:4, nome: "botao 5",   canalMidi: 1, categoria: 0, timbre: ""},
+      {id:5, nome: "botao 6",   canalMidi: 1, categoria: 0, timbre: ""},
+      {id:6, nome: "botao 7",   canalMidi: 1, categoria: 0, timbre: ""},
+      {id:7, nome: "botao 8",   canalMidi: 1, categoria: 0, timbre: ""},
+      {id:8, nome: "botao 9",   canalMidi: 1, categoria: 0, timbre: ""},
+      {id:9, nome: "botao 10",  canalMidi: 1, categoria: 0, timbre: ""},
+      {id:10, nome: "botao 11", canalMidi: 1, categoria: 0, timbre: ""},
+      {id:11, nome: "botao 12", canalMidi: 1, categoria: 0, timbre: ""}
+    ];
+
+    const categorias = [
+      {id: 0, nome: 'categoria 0'},
+      {id: 1, nome: 'categoria 1'},
+      {id: 2, nome: 'categoria 2'},
+      {id: 3, nome: 'categoria 3'},
+    ];
+
+    const timbres = [
+      {id: 0, idCategoria: 0, nome: 'guitarra'},
+      {id: 1, idCategoria: 0, nome: 'violao'},
+      {id: 2, idCategoria: 1, nome: 'piano'},
+      {id: 3, idCategoria: 1, nome: 'orgao'},
+      {id: 4, idCategoria: 2, nome: 'sax'},
+      {id: 5, idCategoria: 2, nome: 'flauta'}
     ];
 
     function carregaPads(){
-      
+      const painelPads = document.getElementById('painelPads');
       painelPads.innerHTML = "";
 
       pads.forEach( (pad)=>{
-        const painelPads = document.getElementById('painelPads');
+        
         painelPads.innerHTML += `<button class='botao' onClick='btnClick(${pad.id})'>${pad.nome}</button>`;
       } )
     }
 
+    function carregaCategorias(){
+      const selCategoria = document.getElementById('selCategoria');
+      selCategoria.innerHTML = "";
+
+      categorias.forEach((c)=>{
+        selCategoria.innerHTML += `<option value="${c.id}">${c.nome}</option>  `;
+      });
+
+    }
+
     carregaPads();
+    carregaCategorias();
 
   </script>
 
