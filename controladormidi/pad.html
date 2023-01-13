@@ -14,6 +14,10 @@
           width: 50%;
           height: 40px;
         }
+        .elemento100 {
+          width: 100%;
+          height: 40px;
+        }
         .label {
           width: 50%;
           
@@ -137,7 +141,7 @@
     </div>
 
     <div class="container" id="pnlEdicao">
-      <label><input type="checkbox" id="modoEdicao"> Modo edição</label>
+      <label><input type="checkbox" id="modoEdicao" class="elemento100"> Modo edição</label>
     </div>
 
       <div class="container" id="painelPads">
@@ -145,11 +149,11 @@
       </div>
 
       <div class="container">
-        <input type="file"  id="abrirArquivo" class="listbox" onchange="abrir()">
+        <input type="file"  id="abrirArquivo" class="elemento100" onchange="abrir()">
       </div>
 
       <div class="container">
-        <button id="salvar" class="listbox" onClick="salvar()">Salvar</button>        
+        <button id="salvar" class="elemento100" onClick="salvar()">Salvar</button>        
       </div>
 
       <div class="popup">
@@ -281,8 +285,13 @@
       })
     }
 
-    function salvar(nomeArquivo) {
+    function salvar() {
       const save = {}
+
+      const nomeArquivo = prompt('Informe um nome para o arquivo.', 'nomeArquivo');
+      if(nomeArquivo == null) {
+        return false;
+      }
 
       save.pads = pads;
       save.input = {id: 0, nome: 'nome'};
