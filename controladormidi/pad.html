@@ -153,7 +153,8 @@
       </div>
 
       <div class="container">
-        <button id="salvar" class="elemento100" onClick="salvar()">Salvar</button>        
+        <button id="salvar" class="elemento100" onClick="salvarLocal()">Salvar Local</button>        
+        <button id="salvar" class="elemento100" onClick="salvar()">Exportar</button>        
       </div>
 
       <div class="popup">
@@ -322,10 +323,23 @@
      if (arquivo) {
        reader.readAsText(arquivo);
      }
-      
-     
+           
     }
 
+    function salvarLocal(){
+
+      const save = {}
+
+      save.pads = pads;
+      save.input = {id: 0, nome: 'nome'};
+      save.output = {id: 0, nome: 'nome'};
+      save.name = '';
+
+      localStorage.setItem('padsSalvo', JSON.stringify(save))
+    }
+
+    let load = JSON.parse(localStorage.getItem('padsSalvo'));
+    pads = load.pads;
     carregaPads();
     carregaCategorias();
 
