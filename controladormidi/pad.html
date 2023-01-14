@@ -138,7 +138,6 @@
           document.getElementById('txtIdPad').value = nmBotao;
           
           document.getElementById('txtNomePad').value = pads[nmBotao].nome;
-          document.getElementById('selCanalMidi').value = pads[nmBotao].canalMidi;
           document.getElementById('selCategoria').value = pads[nmBotao].categoria;
 
           let categoria = parseInt(getSelectedValue('selCategoria'));
@@ -157,7 +156,6 @@
           document.querySelector('.popup').style.display = 'none';
           const txtIdPad = parseInt(document.getElementById('txtIdPad').value);
           pads[txtIdPad].nome = document.getElementById('txtNomePad').value;
-          pads[txtIdPad].canalMidi = parseInt(getSelectedValue('selCanalMidi'));
           pads[txtIdPad].categoria = parseInt(getSelectedValue('selCategoria'));
           pads[txtIdPad].timbre = parseInt(getSelectedValue('selTimbre'));
 
@@ -268,29 +266,6 @@
           </div>
 
           <div class="container">
-            <div class="label">Canal Midi:</div>
-            <select class="" id="selCanalMidi">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-              <option>11</option>
-              <option>12</option>
-              <option>13</option>
-              <option>14</option>
-              <option>15</option>
-              <option>16</option>    
-              
-            </select>
-          </div>
-
-          <div class="container">
             <div class="label">Categoria:</div>
             <select class="" id="selCategoria"></select>
           </div>
@@ -306,18 +281,18 @@
   <script>
     let dispositivosMidi = [];
     let pads = [
-      {id:0, nome: "botao 1",   canalMidi: 2, categoria: 2, timbre: 4},
-      {id:1, nome: "botao 2",   canalMidi: 1, categoria: 1, timbre: 3},
-      {id:2, nome: "botao 3",   canalMidi: 1, categoria: 0, timbre: 0},
-      {id:3, nome: "botao 4",   canalMidi: 1, categoria: 0, timbre: 0},
-      {id:4, nome: "botao 5",   canalMidi: 1, categoria: 0, timbre: 0},
-      {id:5, nome: "botao 6",   canalMidi: 1, categoria: 0, timbre: 0},
-      {id:6, nome: "botao 7",   canalMidi: 1, categoria: 0, timbre: 0},
-      {id:7, nome: "botao 8",   canalMidi: 1, categoria: 0, timbre: 0},
-      {id:8, nome: "botao 9",   canalMidi: 1, categoria: 0, timbre: 0},
-      {id:9, nome: "botao 10",  canalMidi: 1, categoria: 0, timbre: 0},
-      {id:10, nome: "botao 11", canalMidi: 1, categoria: 0, timbre: 0},
-      {id:11, nome: "botao 12", canalMidi: 1, categoria: 0, timbre: 0}
+      {id:0, nome: "botao 1",   categoria: 2, timbre: 4},
+      {id:1, nome: "botao 2",   categoria: 1, timbre: 3},
+      {id:2, nome: "botao 3",   categoria: 0, timbre: 0},
+      {id:3, nome: "botao 4",   categoria: 0, timbre: 0},
+      {id:4, nome: "botao 5",   categoria: 0, timbre: 0},
+      {id:5, nome: "botao 6",   categoria: 0, timbre: 0},
+      {id:6, nome: "botao 7",   categoria: 0, timbre: 0},
+      {id:7, nome: "botao 8",   categoria: 0, timbre: 0},
+      {id:8, nome: "botao 9",   categoria: 0, timbre: 0},
+      {id:9, nome: "botao 10",  categoria: 0, timbre: 0},
+      {id:10, nome: "botao 11", categoria: 0, timbre: 0},
+      {id:11, nome: "botao 12", categoria: 0, timbre: 0}
     ];
 
     const categorias = [
@@ -387,6 +362,7 @@
       }
 
       save.pads = pads;
+      save.canal = parseInt(getSelectedValue('selCanalMidi'));
       save.input = {id: getSelectedValue('midiIn'), nome: getSelectedText('midiIn')};
       save.output = {id: getSelectedValue('midiOut'), nome: getSelectedText('midiOut')};
       save.name = '';
@@ -423,6 +399,7 @@
       const save = {}
 
       save.pads = pads;
+      save.canal = parseInt(getSelectedValue('selCanalMidi'));
       save.input = {id: getSelectedValue('midiIn'), nome: getSelectedText('midiIn')};
       save.output = {id: getSelectedValue('midiOut'), nome: getSelectedText('midiOut')};
       save.name = '';
