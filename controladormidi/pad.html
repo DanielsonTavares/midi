@@ -76,6 +76,35 @@
       </style>
       
       <script type="text/javascript" src="FileSaver.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/webmidi@latest/dist/iife/webmidi.iife.js"></script>
+      <script>
+          WebMidi
+          .enable({sysex:true})
+          .then(onEnabled)
+          .catch(err => alert(err));
+
+          const listaInputs   = [];
+          const listaOutputs   = [];
+
+        // Function triggered when WEBMIDI.js is ready
+        function  onEnabled() {
+          if (WebMidi.inputs.length < 1) {
+            alert('No device detected.');
+          }else {
+            WebMidi.inputs.forEach((device, index) => {
+              const midiIn = document.getElementById('midiIn');
+              midiIn.innerHTML += `<option value="${index}">${index} - ${device.name}</option>`;
+            });
+
+            WebMidi.outputs.forEach((device, index) => {
+              const midiOut = document.getElementById('midiOut');
+              midiOut.innerHTML += `<option value="${index}">${index} - ${device.name}</option>`;
+            });
+
+          }
+        }
+      </script>
+
       <script>
         function btnClick(nmBotao){
           const modoEdicao = document.getElementById("modoEdicao");
@@ -138,11 +167,11 @@
     </div>
     <div class="container">
       
-        <select class="listbox">
+        <select class="listbox" id="midiIn">
           <!-- Opções para o primeiro listbox -->
         </select>
         
-        <select class="listbox">
+        <select class="listbox" id="midiOut">
           <!-- Opções para o segundo listbox -->
         </select>
     </div>
