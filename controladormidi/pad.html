@@ -63,7 +63,7 @@
     background-color: white;
     padding: 20px;
     width: 50%;
-    height: 20%;
+    height: 25%;
   }
   .popup-barra {
     display: flex;
@@ -73,11 +73,22 @@
     margin-left: 10px;
   }
 
+  div.popup-conteudo input, div.popup-conteudo select, div.popup-conteudo .label{
+    padding: 2px;
+    margin-top: 4px;
+  }
+  div.popup-conteudo select{
+    padding: 6px;
+  }
+  div.popup-conteudo button{
+    padding: 6px;
+  }
       </style>
       
       <script type="text/javascript" src="FileSaver.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/webmidi@latest/dist/iife/webmidi.iife.js"></script>
       <script>
+
           WebMidi
           .enable({sysex:true})
           .then(onEnabled)
@@ -205,7 +216,7 @@
 
           <div class="container">
             <div class="label">Nome:</div>
-              <input type="text" id="txtNomePad">
+              <input type="text" id="txtNomePad" class="elemento100">
           </div>
 
           <div class="container">
