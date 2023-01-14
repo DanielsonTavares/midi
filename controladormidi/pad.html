@@ -16,14 +16,22 @@
         }
         .elemento100 {
           width: 100%;
+        }
+        .height40{
           height: 40px;
         }
         .elemento50 {
           width: 50%;
           height: 40px;
+          margin-top: 4px;
+          margin-bottom: 4px;
         }
         .right{
           text-align: right;
+        }
+        .separador{
+          margin-top: 4px;
+          margin-bottom: 4px;
         }
         .label {
           width: 50%;
@@ -94,8 +102,6 @@
           .then(onEnabled)
           .catch(err => alert(err));
 
-          const listaInputs   = [];
-          const listaOutputs   = [];
 
         // Function triggered when WEBMIDI.js is ready
         function  onEnabled() {
@@ -160,12 +166,21 @@
 
 
         function getSelectedValue(elementId) {
-          var elt = document.getElementById(elementId);
+          let elt = document.getElementById(elementId);
 
           if (elt.selectedIndex == -1)
               return null;
 
           return elt.options[elt.selectedIndex].value;
+        }
+
+        function getSelectedText(elementId) {
+          let elt = document.getElementById(elementId);
+
+          if (elt.selectedIndex == -1)
+              return null;
+
+          return elt.options[elt.selectedIndex].text;
         }
 
       </script>
@@ -178,30 +193,63 @@
     </div>
     <div class="container">
       
-        <select class="listbox" id="midiIn">
+        <select class="listbox" id="midiIn" onchange="aoSelecionar('midiIn')">
           <!-- Opções para o primeiro listbox -->
         </select>
         
-        <select class="listbox" id="midiOut">
+        <select class="listbox" id="midiOut" onchange="aoSelecionar('midiOut')">
           <!-- Opções para o segundo listbox -->
         </select>
     </div>
 
+    <div class="separador"></div>
+
     <div class="container" id="pnlEdicao">
-      <div class="elemento100 right"><label><input type="checkbox" id="modoEdicao" class=""> Modo edição</label></div>
+      <div class="elemento100">Canal</div>
+      <div class="elemento100">
+        <select class="listbox" id="selCanalMidi">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>    
+        </select>
+        <label><input type="checkbox" id="modoEdicao" > Modo edição</label> 
+      </div>  
+      
     </div>
 
-      <div class="container" id="painelPads">
+      <div class="separador"></div>
+      
+      <div class="container" id="painelPads"></div>
 
+      <div class="separador"></div>
+
+      <div class="container">
+        <button id="salvar" class="elemento100 height40" onClick="salvarLocal()">Salvar Local</button>        
       </div>
+
+      <div class="separador"></div>
+
+      <div class="container">
+        <button id="salvar" class="elemento100 height40" onClick="salvar()">Exportar</button>        
+      </div>
+
+      <div class="separador"></div>
 
       <div class="container">
         <input type="file"  id="abrirArquivo" class="elemento100" onchange="abrir()">
-      </div>
-
-      <div class="container">
-        <button id="salvar" class="elemento100" onClick="salvarLocal()">Salvar Local</button>        
-        <button id="salvar" class="elemento100" onClick="salvar()">Exportar</button>        
       </div>
 
       <div class="popup">
@@ -251,14 +299,12 @@
             <div class="label">Timbre:</div>
             <select class="" id="selTimbre"></select>
           </div>
-          
-
 
         </div>
       </div>
 
   <script>
-    
+    let dispositivosMidi = [];
     let pads = [
       {id:0, nome: "botao 1",   canalMidi: 2, categoria: 2, timbre: 4},
       {id:1, nome: "botao 2",   canalMidi: 1, categoria: 1, timbre: 3},
@@ -293,7 +339,6 @@
     ];
 
     function carregaPads(){
-      console.log('iniciou carrega');
       const painelPads = document.getElementById('painelPads');
       painelPads.innerHTML = "";
 
@@ -342,8 +387,8 @@
       }
 
       save.pads = pads;
-      save.input = {id: 0, nome: 'nome'};
-      save.output = {id: 0, nome: 'nome'};
+      save.input = {id: getSelectedValue('midiIn'), nome: getSelectedText('midiIn')};
+      save.output = {id: getSelectedValue('midiOut'), nome: getSelectedText('midiOut')};
       save.name = '';
 
       let blob = new Blob([JSON.stringify(save)], { type: "text/plain;charset=utf-8" });
@@ -378,11 +423,17 @@
       const save = {}
 
       save.pads = pads;
-      save.input = {id: 0, nome: 'nome'};
-      save.output = {id: 0, nome: 'nome'};
+      save.input = {id: getSelectedValue('midiIn'), nome: getSelectedText('midiIn')};
+      save.output = {id: getSelectedValue('midiOut'), nome: getSelectedText('midiOut')};
       save.name = '';
 
       localStorage.setItem('padsSalvo', JSON.stringify(save))
+    }
+
+    function aoSelecionar(id){
+      console.log('dfasdfadfa');
+      //const dispositivo = document.getElementById('midiIn');
+      //dispositivosMidi.push({id: getSelectedValue('midiIn'), nome: 'aaaaaaaa'})
     }
 
     //recuperando os dados do localStorage
