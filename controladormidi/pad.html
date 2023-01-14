@@ -118,6 +118,9 @@
               midiOut.innerHTML += `<option value="${index}">${index} - ${device.name}</option>`;
             });
 
+            document.getElementById('midiIn').value = pads.input.id;
+            document.getElementById('midiOut').value = pads.output.id;
+
           }
         }
       </script>
@@ -400,8 +403,8 @@
 
       save.pads = pads;
       save.canal = parseInt(getSelectedValue('selCanalMidi'));
-      save.input = {id: getSelectedValue('midiIn'), nome: getSelectedText('midiIn')};
-      save.output = {id: getSelectedValue('midiOut'), nome: getSelectedText('midiOut')};
+      save.input = {id: parseInt(getSelectedValue('midiIn')), nome: getSelectedText('midiIn')};
+      save.output = {id: parseInt(getSelectedValue('midiOut')), nome: getSelectedText('midiOut')};
       save.name = '';
 
       localStorage.setItem('padsSalvo', JSON.stringify(save))
@@ -417,8 +420,14 @@
     let load = JSON.parse(localStorage.getItem('padsSalvo'));
     if(load){
       pads = load.pads;
+      pads.canal = load.canal;
+      pads.input = load.input;
+      pads.output = load.output;
     }
 
+    document.getElementById('selCanalMidi').value = pads.canal;
+
+ 
     carregaPads();
     carregaCategorias();
 
