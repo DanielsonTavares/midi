@@ -18,6 +18,13 @@
           width: 100%;
           height: 40px;
         }
+        .elemento50 {
+          width: 50%;
+          height: 40px;
+        }
+        .right{
+          text-align: right;
+        }
         .label {
           width: 50%;
           
@@ -141,7 +148,7 @@
     </div>
 
     <div class="container" id="pnlEdicao">
-      <label><input type="checkbox" id="modoEdicao" class="elemento100"> Modo edição</label>
+      <div class="elemento100 right"><label><input type="checkbox" id="modoEdicao" class=""> Modo edição</label></div>
     </div>
 
       <div class="container" id="painelPads">
@@ -338,8 +345,12 @@
       localStorage.setItem('padsSalvo', JSON.stringify(save))
     }
 
+    //recuperando os dados do localStorage
     let load = JSON.parse(localStorage.getItem('padsSalvo'));
-    pads = load.pads;
+    if(load){
+      pads = load.pads;
+    }
+
     carregaPads();
     carregaCategorias();
 
