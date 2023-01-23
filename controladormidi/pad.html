@@ -118,8 +118,10 @@
               midiOut.innerHTML += `<option value="${index}">${index} - ${device.name}</option>`;
             });
 
-            document.getElementById('midiIn').value = pads.input.id;
-            document.getElementById('midiOut').value = pads.output.id;
+            //document.getElementById('midiIn').value = pads.input.id;
+            //document.getElementById('midiOut').value = pads.output.id;
+
+            document.getElementById('selCanalMidi').value = pads.canal || 1;
 
             WebMidi.inputs[parseInt(getSelectedValue('midiIn'))].addForwarder(WebMidi.outputs[parseInt(getSelectedValue('midiOut'))]);
 
@@ -381,7 +383,7 @@
     let arquivoCarregado = []
 
     function abrir(){
-      console.log('sdfadsfadsfs');
+      console.log('exec abrir()');
       const arquivo = document.getElementById('abrirArquivo').files[0];
       const reader = new FileReader();
 
