@@ -118,8 +118,8 @@
               midiOut.innerHTML += `<option value="${index}">${index} - ${device.name}</option>`;
             });
 
-            //document.getElementById('midiIn').value = pads.input.id;
-            //document.getElementById('midiOut').value = pads.output.id;
+            document.getElementById('midiIn').value = pads.input.id;
+            document.getElementById('midiOut').value = pads.output.id;
 
             document.getElementById('selCanalMidi').value = pads.canal || 1;
 
@@ -302,6 +302,10 @@
       {id:11, nome: "botao 12", categoria: 0, timbre: 0}
     ];
 
+    pads.canal = 1;
+    pads.input = {id: 0, nome: ''};
+    pads.output = {id: 0, nome: ''};
+
     const categorias = [
       {id: 0, nome: 'categoria 0'},
       {id: 1, nome: 'categoria 1'},
@@ -321,6 +325,8 @@
     ];
 
     function carregaPads(){
+
+
       const painelPads = document.getElementById('painelPads');
       painelPads.innerHTML = "";
 
@@ -391,6 +397,11 @@
     
       arquivoCarregado = JSON.parse(reader.result);
       pads = arquivoCarregado.pads;
+
+      document.getElementById('midiIn').value = arquivoCarregado.input.id;
+      document.getElementById('midiOut').value = arquivoCarregado.output.id;
+      document.getElementById('selCanalMidi').value = arquivoCarregado.canal || 1;
+
       carregaPads(); 
     }, false);
 
