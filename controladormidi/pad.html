@@ -121,6 +121,8 @@
             document.getElementById('midiIn').value = pads.input.id;
             document.getElementById('midiOut').value = pads.output.id;
 
+            WebMidi.inputs[parseInt(getSelectedValue('midiIn'))].addForwarder(WebMidi.outputs[parseInt(getSelectedValue('midiOut'))]);
+
           }
         }
       </script>
@@ -413,6 +415,8 @@
     function aoSelecionar(id){
       
       WebMidi.inputs[parseInt(getSelectedValue('midiIn'))].addForwarder(WebMidi.outputs[parseInt(getSelectedValue('midiOut'))]); 
+
+
 
       //const dispositivo = document.getElementById('midiIn');
       //dispositivosMidi.push({id: getSelectedValue('midiIn'), nome: 'aaaaaaaa'})
