@@ -411,7 +411,9 @@
     }
 
     function aoSelecionar(id){
-      console.log('dfasdfadfa');
+      
+      WebMidi.inputs[parseInt(getSelectedValue('midiIn'))].addForwarder(WebMidi.outputs[parseInt(getSelectedValue('midiOut'))]); 
+
       //const dispositivo = document.getElementById('midiIn');
       //dispositivosMidi.push({id: getSelectedValue('midiIn'), nome: 'aaaaaaaa'})
     }
