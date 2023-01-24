@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="popup.css">
     <style>
         .container {
           display: flex;
@@ -276,20 +277,115 @@
 
           <div class="container">
             <div class="label">Categoria:</div>
-            <select class="" id="selCategoria"></select>
+            <div class="label">Timbre:</div>
           </div>
 
           <div class="container">
-            <div class="label">Timbre:</div>
+            <select class="" id="selCategoria"></select>
             <select class="" id="selTimbre"></select>
           </div>
 
-          <div id="selTimbre2"></div>
+          
 
         </div>
       </div>
 
+      <div class="popupEdicao">
+
+        <div class="popupTitulo">
+          <div class="col1">categoria</div>
+          <div class="col1"></div>
+          <div class="col2">timbres </div>
+        </div>
+
+        <div class="popupConteudo">
+          
+          <div class="colEsquerda col1 scroll">
+            <div class="popupItemEsq"><div>A. PIANOS/E. PIANOS</div> <button class="btnCategoria" id="btnPiano" onclick="fnClique('btnPiano')"></button> </div>
+            <div class="popupItemEsq"><div>ORGANS/KEYBOARD</div><button class="btnCategoria" id="btnOrgan" onclick="fnClique('btnOrgan')"></button> </div>
+            <div class="popupItemEsq"><div>STRINGS/GUITAR</div><button class="btnCategoria" id="btnString" onclick="fnClique('btnString')"></button> </div>
+            <div class="popupItemEsq"><div>BRASS/BASS</div><button class="btnCategoria" id="btnBrass" onclick="fnClique('btnBrass')"></button> </div>
+            <div class="popupItemEsq"><div>SYNTH/PAD</div><button class="btnCategoria" id="btnSynth" onclick="fnClique('btnSynth')"></button> </div>
+            <div class="popupItemEsq"><div>WORLD/OTHER</div><button class="btnCategoria" id="btnWorld" onclick="fnClique('btnWorld')"></button> </div>
+            <div class="popupItemEsq"><div>DRUMS/FX</div><button class="btnCategoria" id="btnDrums" onclick="fnClique('btnDrums')"></button> </div>
+            <div class="popupItemEsq"><div>EDITADOS</div><button class="btnCategoria" id="btnEditados" onclick="fnClique('btnEditados')"></button> </div>
+          </div>
+
+          <div id="painelTimbres" class="colDireita col2 scroll">
+            <P>Selecione uma categoria ao lado!</P>
+            
+          </div>
+        </div>
+
+      </div>
+
   <script>
+
+    function fnClique(id){
+      
+      const painelTimbres = document.getElementById('painelTimbres');
+      const botao = document.getElementById(id);
+
+      painelTimbres.innerHTML = ""
+
+      if (id === 'btnPiano') {
+        painelTimbres.innerHTML += listpianos;
+        botao.style.backgroundColor = 'red';
+      }else{
+        document.getElementById('btnPiano').style.backgroundColor = '';
+      }
+
+      if (id === 'btnOrgan') {
+        painelTimbres.innerHTML += listkeys;
+        botao.style.backgroundColor = 'red';
+      }else{
+        document.getElementById('btnOrgan').style.backgroundColor = '';
+      }
+
+      if (id === 'btnString') {
+        painelTimbres.innerHTML += liststrings;
+        botao.style.backgroundColor = 'red';
+      }else{
+        document.getElementById('btnString').style.backgroundColor = '';
+      }
+
+      if (id === 'btnBrass') {
+        painelTimbres.innerHTML += listbrass;
+        botao.style.backgroundColor = 'red';
+      }else{
+        document.getElementById('btnBrass').style.backgroundColor = '';
+      }
+
+      if (id === 'btnSynth') {
+        painelTimbres.innerHTML += listsynth;
+        botao.style.backgroundColor = 'red';
+      }else{
+        document.getElementById('btnSynth').style.backgroundColor = '';
+      }
+
+      if (id === 'btnWorld') {
+        painelTimbres.innerHTML += listworld;
+        botao.style.backgroundColor = 'red';
+      }else{
+        document.getElementById('btnWorld').style.backgroundColor = '';
+      }
+
+      if (id === 'btnDrums') {
+        painelTimbres.innerHTML += listdrums;
+        botao.style.backgroundColor = 'red';
+      }else{
+        document.getElementById('btnDrums').style.backgroundColor = '';
+      }
+
+      if (id === 'btnEditados') {
+        painelTimbres.innerHTML += listuser;
+        botao.style.backgroundColor = 'red';
+      }else{
+        document.getElementById('btnEditados').style.backgroundColor = '';
+      }
+
+    }
+
     let dispositivosMidi = [];
     let pads = [
       {id:0, nome: "botao 1",   categoria: 2, timbre: 4},
