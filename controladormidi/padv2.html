@@ -143,7 +143,8 @@
         }
         
         function mostrarPopUp(nmBotao){
-          document.querySelector('.popup').style.display = 'block';
+          //document.querySelector('.popup').style.display = 'block';
+          document.querySelector('.popupEdicao').style.display = 'block';
           document.getElementById('txtIdPad').value = nmBotao;
           
           document.getElementById('txtNomePad').value = pads[nmBotao].nome;
@@ -153,20 +154,33 @@
           carregaTimbres(categoria);
 
           document.getElementById('selTimbre').value = pads[nmBotao].timbre;
+
+          //-----------------------
+          padEmEdicao.categoria = pads[nmBotao].categoria;
+          padEmEdicao.timbre = pads[nmBotao].timbre;
+
+          fnClique(padEmEdicao.categoria);
+          timbreselecionado(padEmEdicao.timbre);
           
         }
 
         function fecharPopUp(){
-          document.querySelector('.popup').style.display = 'none';
+          //document.querySelector('.popup').style.display = 'none';
+          document.querySelector('.popupEdicao').style.display = 'none';
           console.log('sair sem salvar');
         }
 
         function confirmarPopUp(){
-          document.querySelector('.popup').style.display = 'none';
+          //document.querySelector('.popup').style.display = 'none';
+          document.querySelector('.popupEdicao').style.display = 'none';
           const txtIdPad = parseInt(document.getElementById('txtIdPad').value);
-          pads[txtIdPad].nome = document.getElementById('txtNomePad').value;
-          pads[txtIdPad].categoria = parseInt(getSelectedValue('selCategoria'));
-          pads[txtIdPad].timbre = parseInt(getSelectedValue('selTimbre'));
+          //pads[txtIdPad].nome = document.getElementById('txtNomePad').value;
+          //pads[txtIdPad].categoria = parseInt(getSelectedValue('selCategoria'));
+          //pads[txtIdPad].timbre = parseInt(getSelectedValue('selTimbre'));
+
+          pads[padEmEdicao.id].nome = padEmEdicao.nome;
+          pads[padEmEdicao.id].categoria = padEmEdicao.categoria;
+          pads[padEmEdicao.id].timbre = padEmEdicao.timbre;
 
           carregaPads();
         }
@@ -268,12 +282,12 @@
             <button id="fechar-popup" class="popup-botao" onClick="fecharPopUp()">Fechar</button>
           </div>
 
-          <input type="hidden" id="txtIdPad">
+          <!-- <input type="hidden" id="txtIdPad"> -->
 
-          <div class="container">
+          <!--<div class="container">
             <div class="label">Nome:</div>
               <input type="text" id="txtNomePad" class="elemento100">
-          </div>
+          </div> -->
 
           <div class="container">
             <div class="label">Categoria:</div>
@@ -291,6 +305,13 @@
       </div>
 
       <div class="popupEdicao">
+        
+        <input type="hidden" id="txtIdPad">
+
+        <div class="popupNome">
+          <div class="label">Nome Botão:</div>
+          <input type="text" id="txtNomePad" class="elemento100">
+        </div>
 
         <div class="popupTitulo">
           <div class="col1">categoria</div>
@@ -317,6 +338,11 @@
           </div>
         </div>
 
+        <div class="popupRodape">
+          <button onClick="confirmarPopUp()">Confirmar</button>
+          <button onClick="fecharPopUp()">Cancelar</button>
+        </div>
+
       </div>
 
   <script>
@@ -327,6 +353,10 @@
       const botao = document.getElementById(id);
 
       painelTimbres.innerHTML = ""
+
+      padEmEdicao.id = parseInt(document.getElementById('txtIdPad').value);
+      padEmEdicao.nome = document.getElementById('txtNomePad').value;
+      padEmEdicao.categoria = id;
 
       if (id === 'btnPiano') {
         painelTimbres.innerHTML += listpianos;
@@ -386,6 +416,22 @@
 
     }
 
+    function timbreselecionado(id){
+      
+      if(padEmEdicao.timbre !== id){
+        if(document.getElementById(padEmEdicao.timbre)){
+          document.getElementById(padEmEdicao.timbre).style.backgroundColor = '';
+        }
+      }
+      
+      padEmEdicao.timbre = id;
+
+      const botao = document.getElementById(id);
+      if(botao){
+        botao.style.backgroundColor = 'red';
+      }
+    }
+
     let dispositivosMidi = [];
     let pads = [
       {id:0, nome: "botao 1",   categoria: 2, timbre: 4},
@@ -405,6 +451,19 @@
     pads.canal = 1;
     pads.input = {id: 0, nome: ''};
     pads.output = {id: 0, nome: ''};
+
+    const padEmEdicao = {};
+
+    const listaDeCategorias = [
+      {id: 'btnPiano', nome: 'A. PIANOS/E. PIANOS'},
+      {id: 'btnOrgan', nome: 'ORGANS/KEYBOARD'},
+      {id: 'btnString', nome: 'STRINGS/GUITAR'},
+      {id: 'btnBrass', nome: 'BRASS/BASS'},
+      {id: 'btnSynth', nome: 'SYNTH/PAD'},
+      {id: 'btnWorld', nome: 'WORLD/OTHER'},
+      {id: 'btnDrums', nome: 'DRUMS/FX'},
+      {id: 'btnEditados', nome: 'EDITADOS'},
+    ];
 
     const categorias = [
       {id: 0, nome: 'categoria 0'},
