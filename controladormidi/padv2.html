@@ -178,6 +178,9 @@
           //pads[txtIdPad].categoria = parseInt(getSelectedValue('selCategoria'));
           //pads[txtIdPad].timbre = parseInt(getSelectedValue('selTimbre'));
 
+          padEmEdicao.id = parseInt(document.getElementById('txtIdPad').value);
+          padEmEdicao.nome = document.getElementById('txtNomePad').value;
+
           pads[padEmEdicao.id].nome = padEmEdicao.nome;
           pads[padEmEdicao.id].categoria = padEmEdicao.categoria;
           pads[padEmEdicao.id].timbre = padEmEdicao.timbre;
@@ -354,8 +357,7 @@
 
       painelTimbres.innerHTML = ""
 
-      padEmEdicao.id = parseInt(document.getElementById('txtIdPad').value);
-      padEmEdicao.nome = document.getElementById('txtNomePad').value;
+
       padEmEdicao.categoria = id;
 
       if (id === 'btnPiano') {
