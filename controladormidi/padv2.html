@@ -5,96 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="principal.css">
     <link rel="stylesheet" href="popup.css">
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <style>
-        .container {
-          display: flex;
-        flex-wrap: wrap;
-        }
-        .listbox {
-          width: 50%;
-          height: 40px;
-        }
-        .elemento100 {
-          width: 100%;
-        }
-        .height40{
-          height: 40px;
-        }
-        .elemento50 {
-          width: 50%;
-          height: 40px;
-          margin-top: 4px;
-          margin-bottom: 4px;
-        }
-        .right{
-          text-align: right;
-        }
-        .separador{
-          margin-top: 4px;
-          margin-bottom: 4px;
-        }
-        .label {
-          width: 50%;
-          
-        }
-        .botao {
-          display: inline-block;
-          width: 33.33%;
-          height: 100px;
-        }
-
-        #modoEdicao{
-          width: 20px;
-          height: 20px;
-        }
-
-        .bottom {
-                position:absolute;                 
-                bottom:0;                         
-                left:0;                         
-            }
-
-        .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-  }
-  .popup-conteudo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    width: 50%;
-    height: 25%;
-  }
-  .popup-barra {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .popup-botao {
-    margin-left: 10px;
-  }
-
-  div.popup-conteudo input, div.popup-conteudo select, div.popup-conteudo .label{
-    padding: 2px;
-    margin-top: 4px;
-  }
-  div.popup-conteudo select{
-    padding: 6px;
-  }
-  div.popup-conteudo button{
-    padding: 6px;
-  }
-      </style>
       
       <script type="text/javascript" src="FileSaver.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/webmidi@latest/dist/iife/webmidi.iife.js"></script>
@@ -274,13 +189,13 @@
       <div class="separador"></div>
 
       <div class="container">
-        <button id="salvar" class="elemento100 height40" onClick="salvarLocal()"><i class="glyphicon glyphicon-save"></i> Salvar Local</button>        
+        <button id="salvar" class="botaoSalvar elemento100 height40" onClick="salvarLocal()"><i class="glyphicon glyphicon-save"></i> Salvar Local</button>        
       </div>
 
       <div class="separador"></div>
 
       <div class="container">
-        <button id="salvar" class="elemento100 height40" onClick="salvar()"><i class="glyphicon glyphicon-export"></i> Exportar</button>        
+        <button id="salvar" class="botaoExportar elemento100 height40" onClick="salvar()"><i class="glyphicon glyphicon-export"></i> Exportar</button>        
       </div>
 
       <div class="separador"></div>
@@ -375,56 +290,56 @@
 
       if (id === 'btnPiano') {
         painelTimbres.innerHTML += listpianos;
-        botao.style.backgroundColor = 'red';
+        botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnPiano').style.backgroundColor = '';
       }
 
       if (id === 'btnOrgan') {
         painelTimbres.innerHTML += listkeys;
-        botao.style.backgroundColor = 'red';
+        botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnOrgan').style.backgroundColor = '';
       }
 
       if (id === 'btnString') {
         painelTimbres.innerHTML += liststrings;
-        botao.style.backgroundColor = 'red';
+        botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnString').style.backgroundColor = '';
       }
 
       if (id === 'btnBrass') {
         painelTimbres.innerHTML += listbrass;
-        botao.style.backgroundColor = 'red';
+        botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnBrass').style.backgroundColor = '';
       }
 
       if (id === 'btnSynth') {
         painelTimbres.innerHTML += listsynth;
-        botao.style.backgroundColor = 'red';
+        botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnSynth').style.backgroundColor = '';
       }
 
       if (id === 'btnWorld') {
         painelTimbres.innerHTML += listworld;
-        botao.style.backgroundColor = 'red';
+        botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnWorld').style.backgroundColor = '';
       }
 
       if (id === 'btnDrums') {
         painelTimbres.innerHTML += listdrums;
-        botao.style.backgroundColor = 'red';
+        botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnDrums').style.backgroundColor = '';
       }
 
       if (id === 'btnEditados') {
         painelTimbres.innerHTML += listuser;
-        botao.style.backgroundColor = 'red';
+        botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnEditados').style.backgroundColor = '';
       }
@@ -443,7 +358,7 @@
 
       const botao = document.getElementById(id);
       if(botao){
-        botao.style.backgroundColor = 'red';
+        botao.style.backgroundColor = 'var(--btnSelecionado)';
       }
     }
 
