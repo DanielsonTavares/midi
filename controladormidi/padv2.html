@@ -264,14 +264,14 @@
         <div class="popupConteudo">
           
           <div class="colEsquerda col1 scroll">
-            <div class="popupItemEsq"><div>A.PIANOS/E.PIANOS</div> <button class="btnCategoria" id="btnPiano" onclick="fnClique('btnPiano')"></button> </div>
-            <div class="popupItemEsq"><div>ORGANS/KEYBOARD</div><button class="btnCategoria" id="btnOrgan" onclick="fnClique('btnOrgan')"></button> </div>
-            <div class="popupItemEsq"><div>STRINGS/GUITAR</div><button class="btnCategoria" id="btnString" onclick="fnClique('btnString')"></button> </div>
-            <div class="popupItemEsq"><div>BRASS/BASS</div><button class="btnCategoria" id="btnBrass" onclick="fnClique('btnBrass')"></button> </div>
-            <div class="popupItemEsq"><div>SYNTH/PAD</div><button class="btnCategoria" id="btnSynth" onclick="fnClique('btnSynth')"></button> </div>
-            <div class="popupItemEsq"><div>WORLD/OTHER</div><button class="btnCategoria" id="btnWorld" onclick="fnClique('btnWorld')"></button> </div>
-            <div class="popupItemEsq"><div>DRUMS/FX</div><button class="btnCategoria" id="btnDrums" onclick="fnClique('btnDrums')"></button> </div>
-            <div class="popupItemEsq"><div>EDITADOS</div><button class="btnCategoria" id="btnEditados" onclick="fnClique('btnEditados')"></button> </div>
+            <div class="popupItemEsq"><div class="nomeCategoria">A.PIANOS/E.PIANOS</div> <button class="btnCategoria" id="btnPiano" onclick="fnClique('btnPiano')"></button> </div>
+            <div class="popupItemEsq"><div class="nomeCategoria">ORGANS/KEYBOARD</div><button class="btnCategoria" id="btnOrgan" onclick="fnClique('btnOrgan')"></button> </div>
+            <div class="popupItemEsq"><div class="nomeCategoria">STRINGS/GUITAR</div><button class="btnCategoria" id="btnString" onclick="fnClique('btnString')"></button> </div>
+            <div class="popupItemEsq"><div class="nomeCategoria">BRASS/BASS</div><button class="btnCategoria" id="btnBrass" onclick="fnClique('btnBrass')"></button> </div>
+            <div class="popupItemEsq"><div class="nomeCategoria">SYNTH/PAD</div><button class="btnCategoria" id="btnSynth" onclick="fnClique('btnSynth')"></button> </div>
+            <div class="popupItemEsq"><div class="nomeCategoria">WORLD/OTHER</div><button class="btnCategoria" id="btnWorld" onclick="fnClique('btnWorld')"></button> </div>
+            <div class="popupItemEsq"><div class="nomeCategoria">DRUMS/FX</div><button class="btnCategoria" id="btnDrums" onclick="fnClique('btnDrums')"></button> </div>
+            <div class="popupItemEsq"><div class="nomeCategoria">EDITADOS</div><button class="btnCategoria" id="btnEditados" onclick="fnClique('btnEditados')"></button> </div>
           </div>
 
           <div id="painelTimbres" class="colDireita col2 scroll">
@@ -291,64 +291,68 @@
 
     function fnClique(id){
       
+      padEmEdicao.categoria = id || "btnPiano";
+
       const painelTimbres = document.getElementById('painelTimbres');
-      const botao = document.getElementById(id);
+      const botao = document.getElementById(padEmEdicao.categoria);
 
       painelTimbres.innerHTML = ""
 
 
-      padEmEdicao.categoria = id;
+      
 
-      if (id === 'btnPiano') {
+      console.log("padEmEdicao.categoria",padEmEdicao.categoria );
+
+      if (padEmEdicao.categoria === 'btnPiano') {
         painelTimbres.innerHTML += listpianos;
         botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnPiano').style.backgroundColor = '';
       }
 
-      if (id === 'btnOrgan') {
+      if (padEmEdicao.categoria === 'btnOrgan') {
         painelTimbres.innerHTML += listkeys;
         botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnOrgan').style.backgroundColor = '';
       }
 
-      if (id === 'btnString') {
+      if (padEmEdicao.categoria === 'btnString') {
         painelTimbres.innerHTML += liststrings;
         botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnString').style.backgroundColor = '';
       }
 
-      if (id === 'btnBrass') {
+      if (padEmEdicao.categoria === 'btnBrass') {
         painelTimbres.innerHTML += listbrass;
         botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnBrass').style.backgroundColor = '';
       }
 
-      if (id === 'btnSynth') {
+      if (padEmEdicao.categoria === 'btnSynth') {
         painelTimbres.innerHTML += listsynth;
         botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnSynth').style.backgroundColor = '';
       }
 
-      if (id === 'btnWorld') {
+      if (padEmEdicao.categoria === 'btnWorld') {
         painelTimbres.innerHTML += listworld;
         botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnWorld').style.backgroundColor = '';
       }
 
-      if (id === 'btnDrums') {
+      if (padEmEdicao.categoria === 'btnDrums') {
         painelTimbres.innerHTML += listdrums;
         botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{
         document.getElementById('btnDrums').style.backgroundColor = '';
       }
 
-      if (id === 'btnEditados') {
+      if (padEmEdicao.categoria === 'btnEditados') {
         painelTimbres.innerHTML += listuser;
         botao.style.backgroundColor = 'var(--btnSelecionado)';
       }else{

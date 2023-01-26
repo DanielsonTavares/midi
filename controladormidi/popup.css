@@ -103,7 +103,7 @@
 }
 
 .colDireita{
-    max-height: 433px;
+    max-height: 408px;
     display: flex;
     flex-direction: column;
     
@@ -121,4 +121,8 @@
     background-color: var(--backGround2);
     width: 10rem;
     height: 2.7rem;
+}
+
+.nomeCategoria{
+    font-size:2vw;
 }
