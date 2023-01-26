@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="popup.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
         .container {
           display: flex;
@@ -139,6 +141,15 @@
             mostrarPopUp(nmBotao);
           } else {
             console.log('clique normal');
+
+            const canal = parseInt(getSelectedValue('selCanalMidi'));
+            const aux = pads[nmBotao].timbre.split('-');
+            const FSB = aux[0];
+            const MSB = aux[1];
+    
+            WebMidi.outputs[parseInt(getSelectedValue('midiOut'))].sendControlChange(0,87,1);
+            WebMidi.outputs[parseInt(getSelectedValue('midiOut'))].sendControlChange(32, 64, 1);
+            WebMidi.outputs[parseInt(getSelectedValue('midiOut'))].sendProgramChange(17,1);
           }
         }
         
@@ -211,6 +222,7 @@
       
 </head>
 <body>
+  
     <div class="container">
         <div class="label">Input</div>
         <div class="label">Output</div>
@@ -261,13 +273,13 @@
       <div class="separador"></div>
 
       <div class="container">
-        <button id="salvar" class="elemento100 height40" onClick="salvarLocal()">Salvar Local</button>        
+        <button id="salvar" class="elemento100 height40" onClick="salvarLocal()"><i class="glyphicon glyphicon-save"></i> Salvar Local</button>        
       </div>
 
       <div class="separador"></div>
 
       <div class="container">
-        <button id="salvar" class="elemento100 height40" onClick="salvar()">Exportar</button>        
+        <button id="salvar" class="elemento100 height40" onClick="salvar()"><i class="glyphicon glyphicon-export"></i> Exportar</button>        
       </div>
 
       <div class="separador"></div>
@@ -342,8 +354,8 @@
         </div>
 
         <div class="popupRodape">
-          <button onClick="confirmarPopUp()">Confirmar</button>
-          <button onClick="fecharPopUp()">Cancelar</button>
+          <button onClick="confirmarPopUp()"> <span class="glyphicon glyphicon-ok"></span></button>
+          <button onClick="fecharPopUp()"><span class="glyphicon glyphicon-remove"></span></button>
         </div>
 
       </div>
