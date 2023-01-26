@@ -52,8 +52,17 @@ html, body {
     background-color: var(--backGround2);
   }
 
-.botaoSalvar, .botaoExportar{
+.botaoSalvar, .botaoExportar, .botaoAbrirArquivo {
     background-color: var(--backGround2);
+    flex: 1
+}
+
+.botaoAbrirArquivo label {
+    font-weight: 100;
+}
+
+#abrirArquivo{
+    flex:1
 }
 
   #modoEdicao{
@@ -104,4 +113,22 @@ padding: 6px;
 div.popup-conteudo button{
 padding: 6px;
 
+}
+
+
+
+
+
+input[type="file"] {
+    display: none;
+}
+
+
+
+.abrirArquivo label {
+    
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    width: 100%;
 }
