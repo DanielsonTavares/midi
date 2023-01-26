@@ -94,24 +94,25 @@ var  listpianos = `
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-64-92" value="Pf093 - Fonky Fonky">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-64-93" value="Pf094 - FM EPad">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-64-94" value="Pf095 - EP Stack">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-1" value="Pf096 - Piano 1">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-0" value="Pf096 - Piano 1">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Pf097 - Piano 1w">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Pf098 - European Pf">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-2" value="Pf099 - Piano 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Pf100 - Piano 2w">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-3" value="Pf101 - Piano 3">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Pf102 - Piano 3w">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-4" value="Pf103 - Honky-tonk">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Pf104 - Honky-tonk 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-5" value="Pf105 - E.Piano 1">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Pf106 - St.Soft EP">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Pf107 - FM+SA EP">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Pf108 - Wurly">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-6" value="Pf109 - E.Piano 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Pf110 - Detuned EP 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Pf111 - St.FM EP">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Pf112 - EP Legend">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-0" value="Pf113 - EP Phase">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-1" value="Pf099 - Piano 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-1" value="Pf100 - Piano 2w">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-2" value="Pf101 - Piano 3">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-2" value="Pf102 - Piano 3w">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-3" value="Pf103 - Honky-tonk">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-3" value="Pf104 - Honky-tonk 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-4" value="Pf105 - E.Piano 1">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-4" value="Pf106 - St.Soft EP">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-4" value="Pf107 - FM+SA EP">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-4" value="Pf108 - Wurly">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-5" value="Pf109 - E.Piano 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-5" value="Pf110 - Detuned EP 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-5" value="Pf111 - St.FM EP">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-5" value="Pf112 - EP Legend">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-5" value="Pf113 - EP Phase">
+
 
 `
 
@@ -221,44 +222,45 @@ var  listkeys = `
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-65-69" value="Ky103 - JUNO Harm">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-65-70" value="Ky104 - Blues harp">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-65-71" value="Ky105 - Green Bullet">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-7" value="Ky106 - Harpsichord">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Ky107 - Coupled Hps.">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Ky108 - Harpsi.w">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Ky109 - Harpsi.o">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-8" value="Ky110 - Clav.">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Ky111 - Pulse Clav">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-9" value="Ky112 - Celesta">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-10" value="Ky113 - Glockenspiel">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-11" value="Ky114 - Music Box">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-12" value="Ky115 - Vibraphone">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Ky116 - Vibraphone w">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-13" value="Ky117 - Marimba">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Ky118 - Marimba w">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-14" value="Ky119 - Xylophone">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-15" value="Ky120 - Tubular-bell">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Ky121 - Church Bell">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Ky122 - Carillon">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-17" value="Ky123 - Organ 1">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Ky124 - Trem. Organ">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Ky125 - 60s Organ 1">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Ky126 - 70s E.Organ">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-18" value="Ky127 - Organ 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Ky128 - Chorus Or.2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Ky129 - Perc. Organ">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-19" value="Ky130 - Organ 3">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-20" value="Ky131 - Church Org.1">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Ky132 - Church Org.2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Ky133 - Church Org.3">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-21" value="Ky134 - Reed Organ">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Ky135 - Puff Organ">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-22" value="Ky136 - Accordion Fr">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Ky137 - Accordion It">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-23" value="Ky138 - Harmonica">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-24" value="Ky139 - Bandoneon">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-99" value="Ky140 - Crystal">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Ky141 - Syn Mallet">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-113" value="Ky142 - Tinkle Bell">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-115" value="Ky143 - Steel Drums">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-6" value="Ky106 - Harpsichord">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-6" value="Ky107 - Coupled Hps.">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-6" value="Ky108 - Harpsi.w">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-6" value="Ky109 - Harpsi.o">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-7" value="Ky110 - Clav.">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-7" value="Ky111 - Pulse Clav">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-8" value="Ky112 - Celesta">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-9" value="Ky113 - Glockenspiel">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-10" value="Ky114 - Music Box">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-11" value="Ky115 - Vibraphone">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-11" value="Ky116 - Vibraphone w">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-12" value="Ky117 - Marimba">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-12" value="Ky118 - Marimba w">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-13" value="Ky119 - Xylophone">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-14" value="Ky120 - Tubular-bell">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-14" value="Ky121 - Church Bell">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-14" value="Ky122 - Carillon">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-16" value="Ky123 - Organ 1">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-16" value="Ky124 - Trem. Organ">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-16" value="Ky125 - 60s Organ 1">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-16" value="Ky126 - 70s E.Organ">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-17" value="Ky127 - Organ 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-17" value="Ky128 - Chorus Or.2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-17" value="Ky129 - Perc. Organ">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-18" value="Ky130 - Organ 3">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-19" value="Ky131 - Church Org.1">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-19" value="Ky132 - Church Org.2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-19" value="Ky133 - Church Org.3">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-20" value="Ky134 - Reed Organ">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-20" value="Ky135 - Puff Organ">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-21" value="Ky136 - Accordion Fr">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-21" value="Ky137 - Accordion It">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-22" value="Ky138 - Harmonica">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-23" value="Ky139 - Bandoneon">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-98" value="Ky140 - Crystal">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-98" value="Ky141 - Syn Mallet">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-112" value="Ky142 - Tinkle Bell">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-114" value="Ky143 - Steel Drums">
+
 
 `
 
@@ -371,52 +373,53 @@ var liststrings = `
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-66-49" value="St106 - Hurtling Gtr">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-66-50" value="St107 - Power Chord">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-66-51" value="St108 - Punker 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-25" value="St109 - Nylon-str.Gt">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="St110 - Ukulele">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="St111 - Nylon Gt.o">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="St112 - Nylon Gt.2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-26" value="St113 - Steel-str.Gt">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="St114 - 12-str.Gt">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="St115 - Mandolin">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="St116 - Steel + Body">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-27" value="St117 - Jazz Gt.">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="St118 - Pedal Steel">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-28" value="St119 - Clean Gt.">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="St120 - Chorus Gt.">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="St121 - Mid Tone GTR">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-29" value="St122 - Muted Gt.">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="St123 - Funk Pop">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="St124 - Funk Gt.2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="St125 - Jazz Man">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-30" value="St126 - Overdrive Gt">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="St127 - Guitar Pinch">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-31" value="St128 - DistortionGt">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="St129 - Feedback Gt.">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="St130 - Dist Rtm GTR">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-32" value="St131 - Gt.Harmonics">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="St132 - Gt. Feedback">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-41" value="St133 - Violin">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="St134 - Slow Violin">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-42" value="St135 - Viola">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-43" value="St136 - Cello">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-44" value="St137 - Contrabass">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-45" value="St138 - Tremolo Str">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-46" value="St139 - PizzicatoStr">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-49" value="St140 - Strings">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="St141 - Orchestra">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="St142 - 60s Strings">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-50" value="St143 - Slow Strings">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-51" value="St144 - Syn.Strings1">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="St145 - Syn.Strings3">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-56" value="St146 - OrchestraHit">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="St147 - Bass Hit">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="St148 - 6th Hit">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="St149 - Euro Hit">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-100" value="St150 - Atmosphere">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-111" value="St151 - Fiddle">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-121" value="St152 - Gt.FretNoise">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="St153 - Gt.Cut Noise">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="St154 - String Slap">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-24" value="St109 - Nylon-str.Gt">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-24" value="St110 - Ukulele">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-24" value="St111 - Nylon Gt.o">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-24" value="St112 - Nylon Gt.2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-25" value="St113 - Steel-str.Gt">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-25" value="St114 - 12-str.Gt">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-25" value="St115 - Mandolin">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-25" value="St116 - Steel + Body">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-26" value="St117 - Jazz Gt.">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-26" value="St118 - Pedal Steel">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-27" value="St119 - Clean Gt.">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-27" value="St120 - Chorus Gt.">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-27" value="St121 - Mid Tone GTR">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-28" value="St122 - Muted Gt.">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-28" value="St123 - Funk Pop">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-28" value="St124 - Funk Gt.2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-28" value="St125 - Jazz Man">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-29" value="St126 - Overdrive Gt">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-29" value="St127 - Guitar Pinch">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-30" value="St128 - DistortionGt">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-30" value="St129 - Feedback Gt.">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-30" value="St130 - Dist Rtm GTR">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-31" value="St131 - Gt.Harmonics">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-31" value="St132 - Gt. Feedback">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-40" value="St133 - Violin">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-40" value="St134 - Slow Violin">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-41" value="St135 - Viola">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-42" value="St136 - Cello">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-43" value="St137 - Contrabass">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-44" value="St138 - Tremolo Str">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-45" value="St139 - PizzicatoStr">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-48" value="St140 - Strings">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-48" value="St141 - Orchestra">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-48" value="St142 - 60s Strings">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-49" value="St143 - Slow Strings">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-50" value="St144 - Syn.Strings1">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-50" value="St145 - Syn.Strings3">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-55" value="St146 - OrchestraHit">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-55" value="St147 - Bass Hit">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-55" value="St148 - 6th Hit">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-55" value="St149 - Euro Hit">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-99" value="St150 - Atmosphere">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-110" value="St151 - Fiddle">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-120" value="St152 - Gt.FretNoise">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-120" value="St153 - Gt.Cut Noise">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-120" value="St154 - String Slap">
+
 
 `
 
@@ -605,56 +608,57 @@ var  listbrass = `
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-67-105" value="Bs182 - Fazee Bass">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-67-106" value="Bs183 - Hi-Energy Bs">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-67-107" value="Bs184 - Low Nz Bass">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-33" value="Bs185 - Acoustic Bs.">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-34" value="Bs186 - Fingered Bs.">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Bs187 - Finger Slap">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-35" value="Bs188 - Picked Bass">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-36" value="Bs189 - Fretless Bs.">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-37" value="Bs190 - Slap Bass 1">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-38" value="Bs191 - Slap Bass 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-39" value="Bs192 - Synth Bass 1">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Bs193 - SynthBass101">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Bs194 - Acid Bass">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Bs195 - Clavi Bass">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-0" value="Bs196 - Hammer">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-40" value="Bs197 - Synth Bass 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Bs198 - Beef FM Bass">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Bs199 - RubberBass 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Bs200 - Attack Pulse">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-57" value="Bs201 - Trumpet">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Bs202 - Dark Trumpet">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-58" value="Bs203 - Trombone">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Bs204 - Trombone 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Bs205 - Bright Tb">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-59" value="Bs206 - Tuba">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-60" value="Bs207 - MutedTrumpet">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Bs208 - MuteTrumpet2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-61" value="Bs209 - French Horns">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Bs210 - Fr.Horn 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-62" value="Bs211 - Brass 1">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Bs212 - Brass 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-63" value="Bs213 - Synth Brass1">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Bs214 - JP Brass">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Bs215 - Oct SynBrass">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Bs216 - Jump Brass">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-64" value="Bs217 - Synth Brass2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Bs218 - SynBrass sfz">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Bs219 - Velo Brass 1">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-65" value="Bs220 - Soprano Sax">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-66" value="Bs221 - Alto Sax">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-67" value="Bs222 - Tenor Sax">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-68" value="Bs223 - Baritone Sax">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-69" value="Bs224 - Oboe">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-70" value="Bs225 - English Horn">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-71" value="Bs226 - Bassoon">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-72" value="Bs227 - Clarinet">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-73" value="Bs228 - Piccolo">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-74" value="Bs229 - Flute">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-75" value="Bs230 - Recorder">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-76" value="Bs231 - Pan Flute">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-77" value="Bs232 - Bottle Blow">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-79" value="Bs233 - Whistle">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-80" value="Bs234 - Ocarina">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-32" value="Bs185 - Acoustic Bs.">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-33" value="Bs186 - Fingered Bs.">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-33" value="Bs187 - Finger Slap">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-34" value="Bs188 - Picked Bass">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-35" value="Bs189 - Fretless Bs.">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-36" value="Bs190 - Slap Bass 1">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-37" value="Bs191 - Slap Bass 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-38" value="Bs192 - Synth Bass 1">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-38" value="Bs193 - SynthBass101">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-38" value="Bs194 - Acid Bass">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-38" value="Bs195 - Clavi Bass">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-38" value="Bs196 - Hammer">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-39" value="Bs197 - Synth Bass 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-39" value="Bs198 - Beef FM Bass">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-39" value="Bs199 - RubberBass 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-39" value="Bs200 - Attack Pulse">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-56" value="Bs201 - Trumpet">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-56" value="Bs202 - Dark Trumpet">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-57" value="Bs203 - Trombone">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-57" value="Bs204 - Trombone 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-57" value="Bs205 - Bright Tb">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-58" value="Bs206 - Tuba">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-59" value="Bs207 - MutedTrumpet">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-59" value="Bs208 - MuteTrumpet2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-60" value="Bs209 - French Horns">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-60" value="Bs210 - Fr.Horn 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-61" value="Bs211 - Brass 1">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-61" value="Bs212 - Brass 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-62" value="Bs213 - Synth Brass1">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-62" value="Bs214 - JP Brass">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-62" value="Bs215 - Oct SynBrass">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-62" value="Bs216 - Jump Brass">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-63" value="Bs217 - Synth Brass2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-63" value="Bs218 - SynBrass sfz">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-63" value="Bs219 - Velo Brass 1">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-64" value="Bs220 - Soprano Sax">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-65" value="Bs221 - Alto Sax">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-66" value="Bs222 - Tenor Sax">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-67" value="Bs223 - Baritone Sax">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-68" value="Bs224 - Oboe">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-69" value="Bs225 - English Horn">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-70" value="Bs226 - Bassoon">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-71" value="Bs227 - Clarinet">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-72" value="Bs228 - Piccolo">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-73" value="Bs229 - Flute">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-74" value="Bs230 - Recorder">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-75" value="Bs231 - Pan Flute">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-76" value="Bs232 - Bottle Blow">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-78" value="Bs233 - Whistle">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-79" value="Bs234 - Ocarina">
+
 
 `
 
@@ -1108,49 +1112,50 @@ var listsynth = `
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-71-42" value="Sy447 - Borealis">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-71-43" value="Sy448 - JX Warm Pad">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-71-44" value="Sy449 - Analog Bgrnd">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-52" value="Sy450 - Syn.Strings2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-53" value="Sy451 - Choir Aahs">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Sy452 - Chorus Aahs">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-54" value="Sy453 - Voice Oohs">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Sy454 - Humming">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-55" value="Sy455 - SynVox">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Sy456 - Analog Voice">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-81" value="Sy457 - Square Wave">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Sy458 - MG Square">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Sy459 - 2600 Sine">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-82" value="Sy460 - Saw Wave">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Sy461 - OB2 Saw">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Sy462 - Doctor Solo">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Sy463 - Natural Lead">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-0" value="Sy464 - SequencedSaw">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-83" value="Sy465 - Syn.Calliope">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-84" value="Sy466 - Chiffer Lead">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-85" value="Sy467 - Charang">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Sy468 - Wire Lead">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-86" value="Sy469 - Solo Vox">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-87" value="Sy470 - 5th Saw Wave">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-88" value="Sy471 - Bass & Lead">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Sy472 - Delayed Lead">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-89" value="Sy473 - Fantasia">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-90" value="Sy474 - Warm Pad">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Sy475 - Sine Pad">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-91" value="Sy476 - Polysynth">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-92" value="Sy477 - Space Voice">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Sy478 - Itopia">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-93" value="Sy479 - Bowed Glass">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-94" value="Sy480 - Metal Pad">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-95" value="Sy481 - Halo Pad">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-96" value="Sy482 - Sweep Pad">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-97" value="Sy483 - Ice Rain">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-98" value="Sy484 - Soundtrack">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-101" value="Sy485 - Brightness">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-102" value="Sy486 - Goblin">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-103" value="Sy487 - Echo Drops">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Sy488 - Echo Bell">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Sy489 - Echo Pan">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-104" value="Sy490 - Star Theme">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-122" value="Sy491 - Breath Noise">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Sy492 - Fl.Key Click">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-51" value="Sy450 - Syn.Strings2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-52" value="Sy451 - Choir Aahs">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-52" value="Sy452 - Chorus Aahs">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-53" value="Sy453 - Voice Oohs">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-53" value="Sy454 - Humming">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-54" value="Sy455 - SynVox">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-54" value="Sy456 - Analog Voice">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-80" value="Sy457 - Square Wave">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-80" value="Sy458 - MG Square">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-80" value="Sy459 - 2600 Sine">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-81" value="Sy460 - Saw Wave">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-81" value="Sy461 - OB2 Saw">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-81" value="Sy462 - Doctor Solo">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-81" value="Sy463 - Natural Lead">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-81" value="Sy464 - SequencedSaw">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-82" value="Sy465 - Syn.Calliope">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-83" value="Sy466 - Chiffer Lead">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-84" value="Sy467 - Charang">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-84" value="Sy468 - Wire Lead">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-85" value="Sy469 - Solo Vox">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-86" value="Sy470 - 5th Saw Wave">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-87" value="Sy471 - Bass & Lead">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-87" value="Sy472 - Delayed Lead">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-88" value="Sy473 - Fantasia">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-89" value="Sy474 - Warm Pad">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-89" value="Sy475 - Sine Pad">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-90" value="Sy476 - Polysynth">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-91" value="Sy477 - Space Voice">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-91" value="Sy478 - Itopia">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-92" value="Sy479 - Bowed Glass">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-93" value="Sy480 - Metal Pad">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-94" value="Sy481 - Halo Pad">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-95" value="Sy482 - Sweep Pad">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-96" value="Sy483 - Ice Rain">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-97" value="Sy484 - Soundtrack">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-100" value="Sy485 - Brightness">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-101" value="Sy486 - Goblin">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-102" value="Sy487 - Echo Drops">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-102" value="Sy488 - Echo Bell">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-102" value="Sy489 - Echo Pan">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-103" value="Sy490 - Star Theme">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-121" value="Sy491 - Breath Noise">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-121" value="Sy492 - Fl.Key Click">
+
 
 `
 
@@ -1472,19 +1477,20 @@ var listworld = `
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-73-103" value="Wr315 - Ice Palace">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-73-104" value="Wr316 - Story Harp">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-73-105" value="Wr317 - LostParadise">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-16" value="Wr318 - Santur">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-47" value="Wr319 - Harp">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Wr320 - Yang Qin">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-78" value="Wr321 - Shakuhachi">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-105" value="Wr322 - Sitar">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Wr323 - Sitar 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-106" value="Wr324 - Banjo">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-107" value="Wr325 - Shamisen">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-108" value="Wr326 - Koto">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Wr327 - Taisho Koto">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-109" value="Wr328 - Kalimba">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-110" value="Wr329 - Bagpipe">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-112" value="Wr330 - Shanai">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-15" value="Wr318 - Santur">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-46" value="Wr319 - Harp">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-46" value="Wr320 - Yang Qin">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-77" value="Wr321 - Shakuhachi">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-104" value="Wr322 - Sitar">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-104" value="Wr323 - Sitar 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-105" value="Wr324 - Banjo">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-106" value="Wr325 - Shamisen">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-107" value="Wr326 - Koto">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-107" value="Wr327 - Taisho Koto">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-108" value="Wr328 - Kalimba">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-109" value="Wr329 - Bagpipe">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-111" value="Wr330 - Shanai">
+
 
 
 `
@@ -1534,54 +1540,55 @@ var listdrums = `
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-64-120" value="Dr042 - Compusonic 2">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-64-121" value="Dr043 - Mix Drum 1">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="87-64-122" value="Dr044 - Mix Drum 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-48" value="Dr045 - Timpani">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-114" value="Dr046 - Agogo">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-116" value="Dr047 - Woodblock">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Dr048 - Castanets">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-117" value="Dr049 - Taiko">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Dr050 - Concert BD">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-118" value="Dr051 - Melo. Tom 1">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Dr052 - Melo. Tom 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-119" value="Dr053 - Synth Drum">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Dr054 - 808 Tom">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Dr055 - Elec Perc">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-120" value="Dr056 - Reverse Cym.">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-123" value="Dr057 - Seashore">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Dr058 - Rain">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Dr059 - Thunder">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Dr060 - Wind">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-0" value="Dr061 - Stream">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-5-0" value="Dr062 - Bubble">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-124" value="Dr063 - Bird">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Dr064 - Dog">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Dr065 - Horse-Gallop">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Dr066 - Bird 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-125" value="Dr067 - Telephone 1">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Dr068 - Telephone 2">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Dr069 - DoorCreaking">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Dr070 - Door">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-0" value="Dr071 - Scratch">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-5-0" value="Dr072 - Wind Chimes">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-126" value="Dr073 - Helicopter">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Dr074 - Car-Engine">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Dr075 - Car-Stop">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Dr076 - Car-Pass">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-0" value="Dr077 - Car-Crash">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-5-0" value="Dr078 - Siren">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-6-0" value="Dr079 - Train">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-7-0" value="Dr080 - Jetplane">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-8-0" value="Dr081 - Starship">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-9-0" value="Dr082 - Burst Noise">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-127" value="Dr083 - Applause">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Dr084 - Laughing">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Dr085 - Screaming">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Dr086 - Punch">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-0" value="Dr087 - Heart Beat">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-5-0" value="Dr088 - Footsteps">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-47" value="Dr045 - Timpani">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-113" value="Dr046 - Agogo">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-115" value="Dr047 - Woodblock">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-115" value="Dr048 - Castanets">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-116" value="Dr049 - Taiko">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-116" value="Dr050 - Concert BD">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-117" value="Dr051 - Melo. Tom 1">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-117" value="Dr052 - Melo. Tom 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-118" value="Dr053 - Synth Drum">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-118" value="Dr054 - 808 Tom">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-118" value="Dr055 - Elec Perc">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-119" value="Dr056 - Reverse Cym.">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-122" value="Dr057 - Seashore">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-122" value="Dr058 - Rain">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-122" value="Dr059 - Thunder">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-122" value="Dr060 - Wind">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-122" value="Dr061 - Stream">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-5-122" value="Dr062 - Bubble">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-123" value="Dr063 - Bird">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-123" value="Dr064 - Dog">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-123" value="Dr065 - Horse-Gallop">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-123" value="Dr066 - Bird 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-124" value="Dr067 - Telephone 1">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-124" value="Dr068 - Telephone 2">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-124" value="Dr069 - DoorCreaking">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-124" value="Dr070 - Door">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-124" value="Dr071 - Scratch">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-5-124" value="Dr072 - Wind Chimes">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-125" value="Dr073 - Helicopter">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-125" value="Dr074 - Car-Engine">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-125" value="Dr075 - Car-Stop">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-125" value="Dr076 - Car-Pass">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-125" value="Dr077 - Car-Crash">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-5-125" value="Dr078 - Siren">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-6-125" value="Dr079 - Train">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-7-125" value="Dr080 - Jetplane">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-8-125" value="Dr081 - Starship">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-9-125" value="Dr082 - Burst Noise">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-126" value="Dr083 - Applause">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-126" value="Dr084 - Laughing">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-126" value="Dr085 - Screaming">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-126" value="Dr086 - Punch">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-4-126" value="Dr087 - Heart Beat">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-5-126" value="Dr088 - Footsteps">
 <input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-0-127" value="Dr089 - Gun Shot">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-0" value="Dr090 - Machine Gun">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-0" value="Dr091 - Lasergun">
-<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-0" value="Dr092 - Explosion">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-1-127" value="Dr090 - Machine Gun">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-2-127" value="Dr091 - Lasergun">
+<input type="button" class="buttonTimbres" onclick = "timbreselecionado(id)" id="121-3-127" value="Dr092 - Explosion">
+
 
 
 `
