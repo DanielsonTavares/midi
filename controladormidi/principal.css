@@ -17,6 +17,12 @@ html, body {
     flex-wrap: wrap;
     
   }
+
+img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
   .listbox {
     width: 50%;
     height: 40px;
