@@ -138,3 +138,10 @@ input[type="file"] {
     cursor: pointer;
     width: 100%;
 }
+
+
+.rodapeTela {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
