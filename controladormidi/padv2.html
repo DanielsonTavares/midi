@@ -144,12 +144,13 @@
 
             const canal = parseInt(getSelectedValue('selCanalMidi'));
             const aux = pads[nmBotao].timbre.split('-');
-            const FSB = aux[0];
-            const MSB = aux[1];
-    
-            WebMidi.outputs[parseInt(getSelectedValue('midiOut'))].sendControlChange(0,87,1);
-            WebMidi.outputs[parseInt(getSelectedValue('midiOut'))].sendControlChange(32, 64, 1);
-            WebMidi.outputs[parseInt(getSelectedValue('midiOut'))].sendProgramChange(17,1);
+            const MSB = aux[0];
+            const LSB = aux[1];
+            const PC =  aux[2];
+            
+            WebMidi.outputs[parseInt(getSelectedValue('midiOut'))].sendControlChange(0,MSB,canal);
+            WebMidi.outputs[parseInt(getSelectedValue('midiOut'))].sendControlChange(32, LSB, canal);
+            WebMidi.outputs[parseInt(getSelectedValue('midiOut'))].sendProgramChange(PC,canal);
           }
         }
         
